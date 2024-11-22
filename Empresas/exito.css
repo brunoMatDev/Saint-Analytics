@@ -13,12 +13,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: .5rem .5rem;
   background: linear-gradient(180deg, rgba(9, 14, 30, 0.89) 0%, rgba(9, 14, 30, 0.28) 100%);
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
+  
 }
 
 .navbar-brand {
@@ -130,7 +131,7 @@
   background: linear-gradient(180deg, rgb(22, 35, 63) 0%, rgb(9, 14, 30) 100%);
   overflow-x: hidden;
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif; /* Fuente base */
+  font-family: 'Roboto Condensed', sans-serif;
   height: 100%;
 }
 
@@ -149,7 +150,6 @@ h2, h3, h4 {
 
 /* Textos generales - Regular */
 p, li, span {
-  font-family: 'Roboto', sans-serif; /* Usar la fuente Regular */
   font-weight: 400; /* Regular */
 }
 
@@ -405,8 +405,9 @@ p, li, span {
 }
 
 .postcard .postcard__tagbox .yellow.play:hover {
-	background: var(--main-yellow);
+	background: var(--main-blue);
 	color: black;
+  font-weight: bold;
 }
 .yellow .postcard__title:hover {
 	color: var(--main-yellow);

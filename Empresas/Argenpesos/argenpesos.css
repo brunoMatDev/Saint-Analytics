@@ -3,7 +3,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1rem 2rem;
+    padding: .5rem .5rem;
     background: linear-gradient(180deg, rgba(9, 14, 30, 0.89) 0%, rgba(9, 14, 30, 0.28) 100%);
     position: fixed;
     top: 0;
@@ -17,7 +17,6 @@
   
   p,span,li{
     color: #ffffff;
-    font-family: 'Roboto', sans-serif;
     font-weight: 400;
   }
   .navbar-brand {
@@ -129,7 +128,7 @@
   body {
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
     background: linear-gradient(180deg, rgb(22, 35, 63) 0%, rgb(9, 14, 30) 100%);
     box-sizing: border-box;
     min-height: 100vh;

@@ -2,7 +2,6 @@
 .body {
   width: 100%;
   height: 100%;
-  font-family: Arial, sans-serif;
   background: linear-gradient(180deg, rgb(22, 35, 63) 0%, rgb(9, 14, 30) 100%);
   color: white;
   overflow-x: hidden;
@@ -21,6 +20,7 @@
   width: 100%;
   z-index: 1000;
 }
+
 
 .navbar-brand {
   position: absolute;
@@ -300,6 +300,12 @@
   
 }
 
+.info{
+  padding-top: 1rem;
+  padding-right: 3rem;
+}
+
+
 .rectangle {
   width: 60%;
   max-width: 1200px;
@@ -337,7 +343,7 @@
   justify-content: space-between;
   align-items: center;
   background-color: #19294E;
-  padding: 1rem;
+  padding: 0 1rem;
 }
 
 .mail {

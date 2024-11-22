@@ -28,6 +28,11 @@
   flex-grow: 1;
 }
 
+.container{
+  padding-bottom: 3rem;
+  padding-top: 0rem;
+  width: 100%;
+}
 .navbar .nav-link {
   color: #ffffff;
   font-size: 1rem;
@@ -301,12 +306,23 @@
 }
 
 
+.overlap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 2rem;
+}
 .overlap-3 {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #19294E;
-  padding: 1rem;
+  padding: 0 1rem;
+}
+.info{
+  padding-top: 1rem;
+  padding-right: 3rem;
 }
 
 .mail {
