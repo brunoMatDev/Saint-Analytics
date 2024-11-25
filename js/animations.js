@@ -24,3 +24,5 @@ document.addEventListener("DOMContentLoaded", () => {
     animateCountUp(experienceElement, 5); // Incrementa hasta 5
     animateCountUp(clientsElement, 20); // Incrementa hasta 15
 });
+
+
