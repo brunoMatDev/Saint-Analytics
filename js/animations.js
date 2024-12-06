@@ -26,3 +26,45 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+let ultimaPosicionScroll = window.scrollY;
+let header = document.getElementById('header');
+let headerOculto = false; // Variable para controlar si el header está oculto
+
+window.addEventListener('scroll', function () {
+    let posicionActual = window.scrollY;
+
+    if (posicionActual > ultimaPosicionScroll && !headerOculto) {
+        // Usuario hace scroll hacia abajo y el header no está oculto
+        header.style.visibility = "hidden"; // Ocultar el header
+        headerOculto = true;
+    } else if (posicionActual < ultimaPosicionScroll && headerOculto) {
+        // Usuario hace scroll hacia arriba y el header está oculto
+        header.style.visibility = "visible"; // Mostrar el header
+        headerOculto = false;
+    }
+
+    ultimaPosicionScroll = posicionActual; // Actualizar la posición del scroll
+});
+
+
+let MenuCelu = document.getElementById('menuCELU');
+let button = document.getElementById('burguer');
+let body = document.getElementById('body');
+let logoNavBar = document.getElementById('logonav')
+
+button.addEventListener('click', function(){
+    if(MenuCelu.style.left == '0px'){
+        body.style.overflow = 'auto';
+        MenuCelu.style.left = '-100%';
+        logoNavBar.style.visibility = 'visible';
+    }else{
+        body.style.overflow = 'hidden';
+        MenuCelu.style.left = '0px';
+        logoNavBar.style.visibility = 'hidden';
+
+    }
+})
+
+
+
+

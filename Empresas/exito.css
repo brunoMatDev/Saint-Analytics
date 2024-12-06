@@ -69,38 +69,7 @@
 /* Ajustes responsive de la Navbar */
 
 /* Dispositivos pequeños: Móvil (hasta 720px) */
-@media (max-width: 720px) {
-  .navbar-collapse {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    background-color: rgba(9, 14, 30, 0.9);
-    padding: 1rem;
-  }
 
-  .menu {
-    display: none; /* Oculta el menú horizontal en dispositivos pequeños */
-  }
-
-  .menu2 {
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
-
-  .navbar-toggler {
-    display: flex; /* Muestra el botón hamburguesa en pantallas pequeñas */
-    align-items: center;
-    border: none;
-    background: none;
-  }
-
-  .nav-link {
-    text-align: center;
-    width: 100%;
-    padding: 0.5rem 0;
-  }
-}
 
 /* Tablets y Ordenadores Portátiles Medianos (hasta 1366px) */
 @media (max-width: 1366px) {
@@ -152,6 +121,8 @@ h2, h3, h4 {
 p, li, span {
   font-weight: 400; /* Regular */
 }
+
+
 
 /* Cards */
 .postcard {
@@ -270,7 +241,7 @@ p, li, span {
 @media screen and (min-width: 769px) {
   .postcard {
     flex-wrap: inherit;
-
+  
     .postcard__title {
       font-size: 1.8rem;
     }
@@ -284,7 +255,7 @@ p, li, span {
       max-height: 100%;
       transition: transform 0.3s ease;
     }
-
+	
     .postcard__text {
       padding: 3rem;
       width: 100%;
@@ -322,13 +293,78 @@ p, li, span {
       transform: rotate(-4deg);
     }
   }
+
+  
+}
+
+.menuCELU{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-content: center;
+  position: fixed;
+  z-index: 10;
+  background: linear-gradient(180deg, rgb(22, 35, 63) 0%, rgb(9, 14, 30) 100%);
+  width: 100vw;
+  height: 100%;
+  margin-top: 4rem;
+  left : -200%;
+  transition: .8s;
+}
+.liCELU{
+	justify-content: center;
+font-size: 2.8rem;
+padding-top: 1rem;
+padding-bottom: 1rem;
+  text-align: center;
+  color: #ffffff; /* Texto blanco */
+  transition: all 0.3s ease-in-out; /* Transición suave */
+  box-shadow: 0 7px 16px rgba(0, 0, 0, 0.2); /* Sombra ligera */
+}
+
+  .aCELU {
+	text-decoration: none; /* Elimina subrayado */
+	color: #ffffff; /* Mantiene el texto blanco */
+	font-weight: 500; /* Grosor del texto */
+  }
+  
+  .aCELU:hover {
+	color: #50b7f5; /* Color azul brillante al pasar el mouse */
+  }
+.ulCELU{
+	margin-top: 3rem;
+	padding-left: 0;
+	padding-right: 0;
+	text-decoration: none;
+	list-style-type: none;
+	width: 100%;
+}
+.brandCELU{
+	display: flex;
+	justify-content: center;
+	height: auto;
+	padding-top: 1.6rem;
+}
+.redesCELU{
+	display: flex;
+	justify-content: center;
+
+}
+
+.redesCELU a{
+	padding-left: 5rem;
+	padding-right: 5rem;
+	padding-top: 4rem;
+}
+.iconsCELU{
+	width: 7vw;
 }
 @media screen and (min-width: 1024px){
-		.postcard__text {
+	.postcard__text {
       padding: 2rem 3.5rem;
     }
 		
-		.postcard__text:before {
+	.postcard__text:before {
       content: "";
       position: absolute;
       display: block;
@@ -338,16 +374,6 @@ p, li, span {
       width: 38px;
     }
 	
-  .postcard.dark {
-		.postcard__text:before {
-			background: #18151f;
-		}
-  }
-	.postcard.light {
-		.postcard__text:before {
-			background: #e1e5ea;
-		}
-  }
 }
 
 /* COLORS */
@@ -382,10 +408,10 @@ p, li, span {
 	background-color: var(--main-blue);
 }
 .blue::before {
-	background-image: linear-gradient(-30deg, var(--main-blue-rgb-015), transparent 10%);
+	background-image: linear-gradient(80deg, var(--main-blue-rgb-015), transparent 100%);
 }
 .blue:nth-child(2n)::before {
-	background-image: linear-gradient(30deg, var(--main-blue-rgb-015), transparent 10%);
+	background-image: linear-gradient(80deg, var(--main-blue-rgb-015), transparent 100%);
 }
 
 .postcard .postcard__tagbox .red.play:hover {
@@ -1152,7 +1178,7 @@ border-top-right-radius: calc(0.25rem - 1px);
 	animation-delay: 0.1s;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 991px) {
 	.swiper {
 		top: 10vh;
 	}
@@ -1246,6 +1272,43 @@ border-top-right-radius: calc(0.25rem - 1px);
 	.slide:nth-child(even) .card-ghost-info {
 		right: 3%;
 	}
+	.navbar-collapse {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: rgba(9, 14, 30, 0.9);
+    padding: 1rem;
+  }
+
+  .navbar {
+	padding-bottom: 2rem;
+	padding-top: 2rem;
+  }
+
+  .menu {
+    display: none; /* Oculta el menú horizontal en dispositivos pequeños */
+  }
+
+  .menu2 {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+	margin-bottom: 1rem;
+  }
+
+  .navbar-toggler {
+    background: none;
+	font-size: 2.5rem;
+	color:#ffffff;
+	position:absolute;
+	right: .3rem;
+  }
+
+  .nav-link {
+    text-align: center;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
 }
 @keyframes floatAnim {
 	0% {
