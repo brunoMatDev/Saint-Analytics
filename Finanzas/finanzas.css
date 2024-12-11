@@ -1,0 +1,349 @@
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: linear-gradient(180deg, rgba(9, 14, 30, 0.89) 0%, rgba(9, 14, 30, 0.28) 100%);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar-brand {
+  position: absolute;
+  left: 1rem;
+}
+
+.menu2 {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.container{
+  padding-bottom: 3rem;
+  padding-top: 0rem;
+  width: 100%;
+}
+.navbar .nav-link {
+  color: #ffffff;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:active {
+  color: #05caf2;
+}
+
+.navbar .nav-item:last-child {
+  margin-right: 0;
+}
+
+/* Dropdown menu styles */
+.dropdown-submenu > .dropdown-menu {
+  top: 0;
+  left: 100%;
+  display: none;
+}
+
+.dropdown-submenu:hover > .dropdown-menu {
+  display: block;
+}
+
+
+/* Ajustes responsive de la Navbar */
+
+/* Dispositivos pequeños: Móvil (hasta 720px) */
+@media (max-width: 720px) {
+  .navbar-collapse {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: rgba(9, 14, 30, 0.9);
+    padding: 1rem;
+  }
+
+  .menu {
+    display: none; /* Oculta el menú horizontal en dispositivos pequeños */
+  }
+
+  .menu2 {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .navbar-toggler {
+    display: flex; /* Muestra el botón hamburguesa en pantallas pequeñas */
+    align-items: center;
+    border: none;
+    background: none;
+  }
+
+  .nav-link {
+    text-align: center;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+}
+
+/* Tablets y Ordenadores Portátiles Medianos (hasta 1366px) */
+@media (max-width: 1366px) {
+  .menu2 {
+    gap: 2rem;
+  }
+
+  .navbar .nav-link {
+    font-size: 1rem;
+  }
+}
+
+/* Ordenadores de Escritorio Grandes (1440px en adelante) */
+@media (min-width: 1440px) {
+  .menu2 {
+    gap: 2.5rem;
+  }
+
+  .navbar .nav-link {
+    font-size: 1rem;
+  }
+}
+
+/* Main Content Styling */
+.body2 {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgb(22, 35, 63) 0%, rgb(9, 14, 30) 100%);
+  overflow-x: hidden;
+  box-sizing: border-box;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 5%;
+  height: 100%;
+}
+
+.title_div_f {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.text-wrapper-f {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #ffffff;
+  font-family: "Roboto-Regular", Helvetica;
+}
+
+.text-wrapper-f2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 500;
+  color: #ffffff;
+  font-family: "Inter-Regular", Helvetica;
+}
+
+.div_f {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.pbi {
+  width: 100%;
+  max-width: 1400px;
+  height: 900px;
+  border: none;
+  clip-path: inset(37px 0px 100px 0px);
+}
+
+/* Responsive Design for Power BI */
+@media (min-width: 1920px) {
+  .pbi {
+      max-width: 1400px;
+      height: 900px;
+      clip-path: inset(37px 0px 100px 0px);
+  }
+}
+
+@media (min-width: 1440px) and (max-width: 1919px) {
+  .pbi {
+      max-width: 1400px;
+      height: 900px;
+      clip-path: inset(37px 0px 100px 0px);
+  }
+}
+
+@media (min-width: 1366px) and (max-width: 1439px) {
+  .pbi {
+      max-width: 1300px;
+      height: 750px;
+      clip-path: inset(35px 0px 90px 0px);
+  }
+}
+
+@media (max-width: 1280px) {
+  .pbi {
+      max-width: 1000px;
+      height: 650px;
+      clip-path: inset(25px 0px 80px 0px);
+  }
+}
+
+@media (max-width: 720px) {
+  .pbi {
+      max-width: 900px;
+      height: 500px;
+      clip-path: inset(25px 0px 80px 0px);
+  }
+}
+
+@media (max-width: 640px) {
+  .pbi {
+      max-width: 800px;
+      height: 450px;
+      clip-path: inset(25px 0px 66px 0px);
+  }
+}
+
+@media (max-width: 480px) {
+  .pbi {
+      max-width: 700px;
+      height: 300px;
+      clip-path: inset(20px 0px 80px 0px);
+  }
+}
+
+/* Accordion Styling */
+#accordion {
+  background: none; /* Sin fondo para el contenedor del acordeón */
+  
+  .card {
+      background: none; /* Sin fondo en cada tarjeta del acordeón */
+      border: none; /* Sin borde en cada tarjeta */
+  }
+
+  .card-header {
+      margin-top: 8px;
+      background: none; /* Sin fondo en el encabezado de la tarjeta */
+  }
+
+  .accordion-title {
+      position: relative;
+      display: block;
+      padding: 8px 0 8px 50px;
+      background: rgba(9, 14, 30, 0.85); /* Fondo oscuro semitransparente */
+      border-radius: 8px;
+      text-decoration: none;
+      color: #ffffff; /* Color del texto e icono cuando está cerrado */
+      font-size: 16px;
+      font-weight: 700;
+      width: 100%;
+      text-align: left;
+      transition: all 0.4s ease-in-out;
+      border: none;
+      box-shadow: inset 2px 0px 0px #05caf2;
+
+      i {
+          position: absolute;
+          width: 40px;
+          height: 100%;
+          left: 0;
+          top: 0;
+          color: inherit; /* Usa el mismo color que el texto */
+          background: rgba(22, 35, 63, 0.6);
+          text-align: center;
+          border-right: 1px solid transparent;
+      }
+
+      &:hover {
+          padding-left: 60px;
+          color: #05caf2; /* Color al pasar el mouse */
+      }
+  }
+
+  /* Estilo cuando el acordeón está expandido */
+  [aria-expanded="true"] {
+      background: rgba(5, 202, 242, 0.2); /* Fondo ligeramente azul y transparente */
+      color: #ffffff; /* Cambia el color a blanco cuando está expandido */
+
+      i {
+          color: inherit; /* Mantiene el color del texto al expandir */
+          background: #05caf2;
+
+          &:before {
+              content: "\f068"; /* Cambia el ícono a "-" */
+          }
+      }
+  }
+
+  .accordion-body {
+      padding: 40px 55px;
+      background: rgba(22, 35, 63, 0.8); /* Fondo oscuro semitransparente para el contenido */
+      color: #ffffff; /* Texto blanco */
+      border-radius: 8px;
+  }
+}
+
+
+.overlap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 2rem;
+}
+.overlap-3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #19294E;
+  padding: 0 1rem;
+}
+.info{
+  padding-top: 1rem;
+  padding-right: 3rem;
+}
+
+.mail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.redes {
+  display: flex;
+  gap: 1rem;
+}
+
+.zt-mail-icons {
+  width: 5vw;
+  height: auto;
+  max-width: 25px;
+  min-width: 15px;
+}
+
+.text-wrapper-18 {
+  color: #ffffff;
+}
