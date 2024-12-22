@@ -201,10 +201,16 @@
   margin-bottom: 0.5rem;
 }
 
-.text-wrapper-3, .text-wrapper-8, .text-wrapper-11, .text-wrapper-14 {
+.text-wrapper-3{
+  font-size: 3rem;
+  color: #f8f4f880;
+  text-align: center;
+}
+.text-wrapper-8, .text-wrapper-11, .text-wrapper-14 {
   font-size: 3rem;
   color: #f8f4f880;
 }
+
 
 .experience-clients-container {
   display: flex;

@@ -240,6 +240,7 @@ p, li, span {
 
     .container-contacto{
       justify-content: center !important;
+
     }
 
     }
@@ -387,6 +388,18 @@ p, li, span {
   display: flex;
   justify-content: center;
   
+}
+.btn-enviar{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.btn-enviar button{
+  width: 80% ;
+  justify-content: center;
 }
 .highlight {
   background: linear-gradient(90deg, #00e6c3, #00b4d8);
@@ -1048,6 +1061,7 @@ body {
   justify-content: space-between;
 }
 
+
 .form-control {
   background-color: #212d47;
   color: #ffffff;
@@ -1071,6 +1085,7 @@ textarea.form-control:focus {
   box-shadow: 0 0 5px rgba(0, 188, 212, 0.5);
 }
 
+
 .btn-info {
   background-color: #00FFFF;
   color: #161B22;
@@ -1079,4 +1094,25 @@ textarea.form-control:focus {
 
 .btn-info:hover {
   background-color: #00CED1;
+}
+
+.asd{
+  background: linear-gradient(180deg, #152340, #040f24); 
+  border-radius: 1rem;
+  font-size: 1.5rem;
+  width: 35%;
+}
+
+.contacto{
+  display: flex;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  gap: 8rem;
+}
+
+.contacto-info h4{
+  color: white;
+  padding-left: 4rem;
 }
