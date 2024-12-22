@@ -237,6 +237,11 @@ p, li, span {
     .iconsCELU {
       width: 8vw; /* Tamaño adecuado para pantallas pequeñas */
     }
+
+    .container-contacto{
+      justify-content: center !important;
+    }
+
     }
 
   /* Footer */
@@ -349,14 +354,14 @@ p, li, span {
   box-sizing: border-box;
 }
 .container2{
-  margin-top: 8rem;
-  margin-bottom: 8rem;
+  margin-top: 13rem;
+  margin-bottom: 10rem;
     align-items: center;
     justify-content: center;
     display: flex;
 }
 .tit{
-  font-size: 2.5rem;
+  font-size: 3rem;
   color: white;
   margin-top: 0;
     margin-bottom: 1.4rem;
@@ -409,8 +414,17 @@ p, li, span {
   box-shadow: 0 4px 12px rgba(0, 230, 195, 0.3);
 }
 
+.Servicios{
+  padding-bottom: 4rem;
+}
 
-
+.title-section{
+  color: white;
+  font-size: 3rem;
+  padding-left: 4rem;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+}
 body {
   --background-color: #18181b;
   --text-color: #a1a1aa;
@@ -501,11 +515,12 @@ body {
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* Tres columnas de igual tamaño */
-  gap: 20px; /* Espacio entre las tarjetas */
-  max-width: 1200px; /* Ancho máximo del contenedor */
+  gap: 3rem; /* Espacio entre las tarjetas */
+  max-width: 1450px; /* Ancho máximo del contenedor */
   margin: 0 auto; /* Centra el contenedor horizontalmente */
   padding: 20px; /* Espaciado interno opcional */
 }
+
 
 .card {
   background-color: var(--background-color);
@@ -535,15 +550,14 @@ body {
       padding: 8px;
 
       &::after {
-          content: "";
           position: absolute;
-          inset: 4.5px;
           border-radius: 50%;
           background-color: var(--card-icon-background-color);
           border: 1px solid var(--card-icon-border-color);
           backdrop-filter: blur(2px);
           transition: background-color 0.25s, border-color 0.25s;
       }
+
 
       svg {
           position: relative;
@@ -557,13 +571,21 @@ body {
       }
   }
 
+  .icon i {
+    position: relative;
+    z-index: 1;
+    display: block;
+    color: var(--card-icon-color);
+    transition: color 0.25s;
+    font-size: 3rem;
+  }
+
   h4 {
       z-index: 2;
       position: relative;
-      margin: 12px 0 4px 0;
       font-family: inherit;
       font-weight: 600;
-      font-size: 14px;
+      font-size: 1.4rem;
       line-height: 2;
       color: var(--card-label-color);
   }
@@ -572,7 +594,7 @@ body {
       z-index: 2;
       position: relative;
       margin: 0;
-      font-size: 14px;
+      font-size: 1rem;
       line-height: 1.7;
       color: var(--text-color);
   }
@@ -978,15 +1000,83 @@ body {
       opacity: var(--blur-opacity);
   }
 
-  .twitter {
-      position: fixed;
-      display: block;
-      right: 12px;
-      bottom: 12px;
-      svg {
-          width: 32px;
-          height: 32px;
-          fill: #fff;
-      }
-  }
+}
+
+.Productos{
+  background-color: #19294E;
+  padding-bottom: 8rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.descript{
+  color: white;
+  padding-top: 1rem;
+  padding-left: 4rem;
+  padding-right: 8rem;
+}
+
+.descript h4{
+  font-size: 1.5rem;
+}
+.cont-prod{
+  display: 	grid;
+  grid-template-columns: repeat(2, 1fr); /* Tres columnas de igual tamaño */
+}
+
+.images-container {
+  position: relative;
+  flex: 1;
+}
+
+.image1 {
+  position: relative;
+  width: 80%;
+  bottom: 18%;
+  left: 19%;
+}
+
+.image2 {
+  position: absolute;
+  top: 20%;
+  right: 20%;
+  width: 80%; /* Tamaño relativo para que sea más pequeña */
+  z-index: 1;
+}
+
+.container-contacto{
+  justify-content: space-between;
+}
+
+.form-control {
+  background-color: #212d47;
+  color: #ffffff;
+  border: 1px solid #1a2e48; 
+}
+
+.form-control:focus {
+  background-color: #1a2e48;
+  color: #ffffff;
+  border-color: #00bcd4;
+  box-shadow: 0 0 5px rgba(0, 188, 212, 0.5);
+}
+
+textarea.form-control {
+  background-color: #1a2e48;
+  color: #ffffff;
+}
+
+textarea.form-control:focus {
+  border-color: #00bcd4;
+  box-shadow: 0 0 5px rgba(0, 188, 212, 0.5);
+}
+
+.btn-info {
+  background-color: #00FFFF;
+  color: #161B22;
+  transition: background-color 0.3s ease;
+}
+
+.btn-info:hover {
+  background-color: #00CED1;
 }
