@@ -79,8 +79,15 @@
   color: white;
   padding-top: 1rem;
   font-size: 2rem;
+  letter-spacing: .2rem; /* Puedes ajustar el valor según el espaciado que desees */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;;
 }
-
+.bi-microsoft{
+  font-size: 3rem;
+}
+.img-cert{
+  font-size:2.2rem;
+}
 /* Estilo para la imagen */
 .cert img {
   height: 3em; /* Tamaño igual a la altura de la línea del texto */
@@ -441,6 +448,7 @@ p, li, span {
 
 .btn-p{
   padding-top: 2rem;
+  padding-left: 2rem;
 }
 
 .Servicios{
@@ -548,7 +556,7 @@ body {
   gap: 3rem; /* Espacio entre las tarjetas */
   max-width: 1450px; /* Ancho máximo del contenedor */
   margin: 0 auto; /* Centra el contenedor horizontalmente */
-  padding: 20px; /* Espaciado interno opcional */
+  padding-top: 3rem; /* Espaciado interno opcional */
 }
 
 
@@ -1043,21 +1051,27 @@ body {
 .Productos{
   scroll-snap-align: start; /* Alinear al inicio de la sección */
   background-color: #19294E;
-  padding-bottom: 10rem;
-  padding-top: 2rem;
-  padding-left: 2rem;
+  padding-left: 3rem;
   padding-right: 2rem;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
 }
 
 .descript{
   color: white;
-  padding-top: 1rem;
-  padding-left: 4rem;
-  padding-right: 8rem;
+
 }
 
+.descript h3{
+  color: white;
+  font-size: 2rem;
+  padding-left: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+}
 .descript h4{
   font-size: 1.5rem;
+  padding-left: 2rem;
 }
 .cont-prod{
   display: 	grid;
@@ -1067,20 +1081,36 @@ body {
 .images-container {
   display: flex;
   flex-direction: column; /* Alinea imágenes en columna */
-  gap: 2rem; /* Espaciado entre imágenes */
+  gap: 1.3rem; /* Espaciado entre imágenes */
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
+
 .image-wrapper {
-  width: 100%; /* Tamaño reducido */
-  height: 100%; /* Tamaño reducido */
+  width: 60%;
   position: relative;
   overflow: hidden;
   border-radius: 1rem;
   cursor: pointer;
   margin: 0 auto; /* Centra las imágenes horizontalmente */
 }
+.image1, .image2{
+  width: 100%; /* Ocupa el 100% del contenedor en cuanto a ancho */
+  height: auto; /* Mantiene la proporción */
+  object-fit: contain; /* Asegura que la imagen se ajuste completamente sin cortarse */
+}
+.image1{
+}
+.product-link1{
+  position: relative;
+  right: 6rem;
+}
+.product-link2{
+  position: relative;
+  left: 6rem;
+}
 .image-wrapper img {
   width: 100%;
-  object-fit: cover;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 .image-wrapper .overlay {
