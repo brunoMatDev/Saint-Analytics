@@ -79,14 +79,14 @@
   color: white;
   padding-top: 1rem;
   font-size: 2rem;
-  letter-spacing: .2rem; /* Puedes ajustar el valor según el espaciado que desees */
+  letter-spacing: .1rem; /* Puedes ajustar el valor según el espaciado que desees */
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;;
 }
 .bi-microsoft{
-  font-size: 3rem;
+  font-size: 2rem;
 }
 .img-cert{
-  font-size:2.2rem;
+  font-size:2rem;
 }
 /* Estilo para la imagen */
 .cert img {
@@ -119,27 +119,7 @@ p, li, span {
 }
 
 
-/* Tablets y Ordenadores Portátiles Medianos (hasta 1366px) */
-@media (max-width: 1366px) {
-  .menu2 {
-    gap: 2rem;
-  }
 
-  .navbar .nav-link {
-    font-size: 1rem;
-  }
-}
-
-/* Ordenadores de Escritorio Grandes (1440px en adelante) */
-@media (min-width: 1440px) {
-  .menu2 {
-    gap: 2.5rem;
-  }
-
-  .navbar .nav-link {
-    font-size: 1rem;
-  }
-}
 
 
 /*MENU CELU*/
@@ -213,71 +193,7 @@ p, li, span {
 	height: auto;
   }
 
-@media (max-width: 991px) {
-  .navbar {
-    padding-bottom: 2rem;
-    padding-top: 2rem;
-    }
-  
-    .menu {
-      display: none; /* Oculta el menú horizontal en dispositivos pequeños */
-    }
-  
-    .menu2 {
-      flex-direction: column;
-      align-items: center;
-      width: 100%;
-    margin-bottom: 1rem;
-    }
-  
-    .navbar-toggler {
-      background: none;
-    font-size: 2.5rem;
-    color:#ffffff;
-    position:absolute;
-    right: .3rem;
-    }
-  
-    .nav-link {
-      text-align: center;
-      width: 100%;
-      padding: 0.5rem 0;
-    }
-  }
 
-  /* Media Queries */
-  @media screen and (max-width: 768px) {
-    .liCELU {
-      font-size: 2rem; /* Texto más pequeño en pantallas medianas */
-    }
-    
-    .iconsCELU {
-      width: 6vw; /* Ajusta el tamaño del icono */
-    }
-    }
-    
-    @media screen and (max-width: 480px) {
-    .liCELU {
-      font-size: 1.8rem; /* Ajuste del texto en pantallas pequeñas */
-    }
-    
-    .redesCELU {
-      flex-direction: row; /* Asegura que los íconos sigan en fila */
-      justify-content: space-around; /* Distribuye los íconos de manera uniforme */
-      padding-bottom: 1rem; /* Añade espacio inferior */
-      gap:0.5;
-    }
-    
-    .iconsCELU {
-      width: 8vw; /* Tamaño adecuado para pantallas pequeñas */
-    }
-
-    .container-contacto{
-      justify-content: center !important;
-
-    }
-
-    }
 
   /* Footer */
  
@@ -438,6 +354,9 @@ p, li, span {
   border-radius: 5px;
   transition: all 0.3s ease;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;;
+}
+#button{
+  border-radius: 1rem;
 }
 
 .demo-btn:hover {
@@ -1072,6 +991,7 @@ body {
 .descript h4{
   font-size: 1.5rem;
   padding-left: 2rem;
+  font-weight: 500;
 }
 .cont-prod{
   display: 	grid;
@@ -1205,3 +1125,156 @@ textarea.form-control:focus {
   color: white;
   padding-left: 4rem;
 }
+
+
+
+/* Tablets y Ordenadores Portátiles Medianos (hasta 1366px) */
+@media (max-width: 1366px) {
+  .grid{
+    gap: 1rem;
+  }
+  .menu2 {
+    gap: 2rem;
+  }
+
+  .navbar .nav-link {
+    font-size: 1rem;
+  }
+
+  .Servicios{
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .Productos{
+    padding-left: 1.5rem;
+  }
+  .Productos h3{
+    font-size: 3rem;
+    padding-bottom: 3rem;
+    padding-top: 1rem;
+  }
+  .title-section{
+    font-size: 3rem;
+    padding-bottom: 0rem;
+    padding-left: 1rem;
+  }
+  .product-link1{
+    right: 0;
+  }
+  .product-link2{
+    left: 0;
+  }
+  .image-wrapper{
+    width: 80%;
+  }
+  .images-container{
+    padding-top: 1rem;
+  }
+  .descript h1{
+    padding-bottom: 0rem;
+  }
+  
+  .contacto{
+    gap: 1rem;
+    padding-top: 2rem;
+    padding-left: 1.5rem;
+  }
+  .contacto-info{
+    padding-left: 0rem;
+  }
+  .contacto-info h2{
+    padding-top: 1rem;
+    font-size: 3rem;
+    padding-left: 2rem;
+  }
+  .contacto-info h4{
+    padding-top: 2rem;
+    padding-left: 2rem;
+    padding-right: 5rem;
+  }
+}
+
+@media (max-width:1140px){
+  .card h4{
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .navbar {
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+    }
+  
+    .menu {
+      display: none; /* Oculta el menú horizontal en dispositivos pequeños */
+    }
+  
+    .menu2 {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    margin-bottom: 1rem;
+    }
+  
+    .navbar-toggler {
+      background: none;
+    font-size: 2.5rem;
+    color:#ffffff;
+    position:absolute;
+    right: .3rem;
+    display: flex;
+    }
+  
+    .nav-link {
+      text-align: center;
+      width: 100%;
+      padding: 0.5rem 0;
+    }
+  }
+
+  
+
+/* Ordenadores de Escritorio Grandes (1440px en adelante) */
+@media (min-width: 1440px) {
+  .menu2 {
+    gap: 2.5rem;
+  }
+
+  .navbar .nav-link {
+    font-size: 1rem;
+  }
+}
+  /* Media Queries */
+  @media screen and (max-width: 768px) {
+    .liCELU {
+      font-size: 2rem; /* Texto más pequeño en pantallas medianas */
+    }
+    
+    .iconsCELU {
+      width: 6vw; /* Ajusta el tamaño del icono */
+    }
+    }
+    
+    @media screen and (max-width: 480px) {
+    .liCELU {
+      font-size: 1.8rem; /* Ajuste del texto en pantallas pequeñas */
+    }
+    
+    .redesCELU {
+      flex-direction: row; /* Asegura que los íconos sigan en fila */
+      justify-content: space-around; /* Distribuye los íconos de manera uniforme */
+      padding-bottom: 1rem; /* Añade espacio inferior */
+      gap:0.5;
+    }
+    
+    .iconsCELU {
+      width: 8vw; /* Tamaño adecuado para pantallas pequeñas */
+    }
+
+    .container-contacto{
+      justify-content: center !important;
+
+    }
+
+    }
