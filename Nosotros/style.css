@@ -157,7 +157,6 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 6rem;
-  width: 80%;
   max-width: 1200px;
   margin-top: 3rem;
 }
@@ -200,12 +199,15 @@
   color: #ffffff;
   margin-bottom: 0.5rem;
 }
+.text-wrapper-7{
 
+}
 .text-wrapper-3{
   font-size: 3rem;
   color: #f8f4f880;
-  text-align: center;
+  font-weight:600;
 }
+
 .text-wrapper-8, .text-wrapper-11, .text-wrapper-14 {
   font-size: 3rem;
   color: #f8f4f880;
@@ -215,7 +217,7 @@
 .experience-clients-container {
   display: flex;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 8rem;
   margin-top: 2rem;
   width: 100%;
   max-width: 1200px;
@@ -256,6 +258,7 @@
   font-size: 3rem;
   font-weight: 500;
   color: #2ad6cad6;
+  padding-left: 7rem;
 }
 
 .text-wrapper-6, .text-wrapper-9, .text-wrapper-12, .text-wrapper-15 {
@@ -315,7 +318,7 @@
 
 
 .rectangle {
-  width: 60%;
+  width: 100%;
   max-width: 1200px;
   padding: 2rem;
   border-radius: 20px;
@@ -336,14 +339,28 @@
 }
 
 .group {
-  background-color: #05caf2;
-  border-radius: 40px;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  line-height: 1;
+  gap: 0.5rem;
+  border-radius: 5px;
+  padding: 0.65rem 0.70rem;
+  background: #00e6c3;
+  color: #091322;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;  
+  transition: all 0.3s ease;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;;
+}
+
+.group a{
+  text-decoration: none;
+  color: #091322;
+}
+.group:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px  #05caf2;
+  color: #091322;
 }
 
 .overlap-3 {

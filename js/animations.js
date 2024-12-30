@@ -1,4 +1,4 @@
-// animations.js
+
 function animateCountUp(element, target) {
     let count = 0;
     const duration = 1400; // Duración total de la animación en ms
@@ -65,4 +65,24 @@ button.addEventListener('click', function(){
     }
 })
 
+document.querySelector('#contact-form').addEventListener('submit', async (e) => {
+    e.preventDefault();
+  
+    const formData = new FormData(e.target);
+    const data = Object.fromEntries(formData);
+  
+    const response = await fetch('http://localhost:3000/send-email', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    });
+  
+    const result = await response.json();
+    if (result.success) {
+      alert('Correo enviado exitosamente.');
+    } else {
+      alert('Error al enviar el correo: ' + result.message);
+    }
+  });
+  
 
