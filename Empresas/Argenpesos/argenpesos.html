@@ -23,43 +23,102 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <link rel="stylesheet" href="/Empresas/Argenpesos/argenpesos.css" />
+    <link rel="stylesheet" href="/Empresas/exito.css" />
   </head>
 
-  <body class="body">
+  <body class="body2" id="body">
     <header id="header">
       <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <img src="/images/logo.png" alt="Saint Analytics Logo" style="width: 80px;">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <div class="menu">
-                    <ul class="menu2 navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link navtext" href="/Nosotros/about.html">Nosotros</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Servicios</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/Empresas/exito.html">Empresas</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/Finanzas/finanzas.html">Finanzas Personales</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Contacto</a>
-                        </li>
-                    </ul>
-                </div>
+          <a class="navbar-brand" href="#" id="logonav">
+            <img
+              src="/images/logo.png"
+              alt="Saint Analytics Logo"
+              style="width: 100px"
+            />
+          </a>
+          <button id="burguer" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-list"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="menu">
+              <ul class="menu2 navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link navtext" href="/Nosotros/about.html"
+                    >Nosotros</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Servicios</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/Empresas/exito.html">Empresas</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/Productos/productos.html"
+                    >Productos</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Contacto</a>
+                </li>
+              </ul>
             </div>
+          </div>
         </div>
-    </nav>
+      </nav>
     </header>
+
+    <div class="menuCELU" id="menuCELU">
+      <a class="brandCELU" href="#">
+        <img
+          src="/images/logo.png"
+          alt="Saint Analytics Logo"
+        />
+      </a>
+      <ul class="ulCELU">
+        <li class="liCELU">
+          <a class="aCELU" href="/Nosotros/about.html"
+            >Nosotros</a>
+        </li>
+        <li class="liCELU" >
+          <a class="aCELU" href="#">Servicios</a>
+        </li>
+        <li class="liCELU">
+          <a class="aCELU" href="/Empresas/exito.html">Empresas</a>
+        </li>
+        <li class="liCELU">
+          <a class="aCELU" href="/Productos/productos.html"
+            >Productos</a
+          >
+        </li>
+        <li class="liCELU">
+          <a class="aCELU" href="#">Contacto</a>
+        </li>
+      </ul>
+      <div class="redesCELU" aria-label="Enlaces a redes sociales">
+        <a href="#" aria-label="Discord">
+          <img
+            class="iconsCELU"
+            src="/images/discord.png"
+            alt="Ícono de Discord"
+          />
+        </a>
+        <a href="#" aria-label="LinkedIn">
+          <img
+            class="iconsCELU"
+            src="/images/linkedin.png"
+            alt="Ícono de LinkedIn"
+          />
+        </a>
+        <a href="#" aria-label="Instagram">
+          <img
+            class="iconsCELU"
+            src="/images/instagram.png"
+            alt="Ícono de Instagram"
+          />
+        </a>
+      </div>
+    </div>
 
     <main>
       <div class="container">
@@ -133,9 +192,9 @@
             src="/images/mail.png"
             alt="Ícono de correo electrónico"
           />
-          <div class="text-wrapper-18 ">info@saintanalytics.com</div>
+          <p>info@saintanalytics.com</p>
         </div>
-        <div>
+        <div class="copyright">
           <p class="text-wrapper-18 info">&copy; 2024 Saint Analytics</p>
         </div>
         <div class="redes" aria-label="Enlaces a redes sociales">
@@ -164,12 +223,24 @@
       </div>
     </div>
   </footer>
+  <script>
+    let MenuCelu = document.getElementById('menuCELU');
+    let button = document.getElementById('burguer');
+    let body = document.getElementById('body');
+    let logoNavBar = document.getElementById('logonav');
 
-   
-      
+    button.addEventListener('click', function(){
+        if(MenuCelu.style.left == '0px'){
+            body.style.overflow = 'auto';
+            MenuCelu.style.left = '-100%';
+            logoNavBar.style.visibility = 'visible';
+        }else{
+            body.style.overflow = 'hidden';
+            MenuCelu.style.left = '0px';
+            logoNavBar.style.visibility = 'hidden';
 
-
-
+        }});
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

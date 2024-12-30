@@ -37,9 +37,13 @@ li {
   gap: 1rem;
 }
 
-.info {
-  padding-top: 1rem;
-  padding-right: 3rem;
+.copyright{
+  width: 33.3%;
+  place-items: center;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
 }
 
 .menu {
@@ -142,19 +146,15 @@ body {
   background: linear-gradient(180deg, rgb(22, 35, 63) 0%, rgb(9, 14, 30) 100%);
   box-sizing: border-box;
   min-height: 100vh;
-  padding-top: 58px;
-  /* Espacio para el navbar */
 }
 
 .content {
-  padding-left: 3rem;
-  padding-right: 4rem;
+  padding-left: 3%;
+  padding-right: 4%;
 }
 
 .titulo {
-  padding-top: 1.5rem;
-  padding-bottom: 1rem;
-  padding-left: 2.5rem;
+  padding: 2rem;
   font-family: 'Roboto Condensed', sans-serif;
   font-weight: 300;
   font-size: 4rem;
@@ -171,8 +171,8 @@ body {
 .container {
   max-width: 130rem;
   margin: 0 auto;
+  padding-top: 58px;
   /* Centra horizontalmente */
-  padding-top: 0;
   padding-bottom: 30px;
   padding-left: 0px;
   padding-right: 0px;
@@ -181,13 +181,14 @@ body {
 }
 
 .img {
-  padding-left: 30rem;
-  padding-right: 30rem;
+  display: flex;
+  justify-content: center;
   padding-top: 5rem;
   padding-bottom: 3rem;
 }
 
 .imgOBJ {
+  min-width: 345px;
   border-radius: 1rem;
 }
 
@@ -219,7 +220,7 @@ body {
   margin-bottom: 15px;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 1.2rem;
   padding-left: 2.5rem;
 }
 .subarrows{
@@ -243,16 +244,16 @@ body {
 }
 
 @media (max-width: 768px) {
-  .container {
-    padding: 15px;
-  }
 
   header h1 {
     font-size: 1.5rem;
   }
 
   .section h2 {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+  }
+  .section p {
+    font-size: 1rem;
   }
 }
 
@@ -261,21 +262,28 @@ body {
 
 .overlap-3 {
   display: flex;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
   background-color: #19294E;
-  padding: 0 1rem;
 }
 
 .mail {
   display: flex;
-  justify-content: center;
+  text-wrap: wrap;
+  overflow-wrap: anywhere;
+  width: 33.3%;
   align-items: center;
   gap: 0.5rem;
+  padding-right: 4%;
 }
 
 .redes {
   display: flex;
+  width: 33.3%;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: end;
   gap: 1rem;
 }
 
@@ -287,7 +295,11 @@ body {
 }
 
 .text-wrapper-18 {
+  align-content: center;
   color: #ffffff;
+  min-height: 72px;
+  padding: 0;
+  margin: 0;
 }
 
 .presentacion {

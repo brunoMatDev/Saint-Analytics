@@ -552,11 +552,14 @@ p, li, span {
 }
 
 .mail {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-}
+	display: flex;
+	text-wrap: wrap;
+	overflow-wrap: anywhere;
+	width: 33.3%;
+	align-items: center;
+	gap: 0.5rem;
+	padding-right: 4%;
+  }
 
 .redes {
   display: flex;
@@ -610,12 +613,11 @@ p, li, span {
 
 
 .text-wrapper-18 {
-  color: #ffffff;
-}
-
-.info{
-  padding-top: 1rem;
-  padding-right: 3rem;
+	align-content: center;
+	color: #ffffff;
+	min-height: 72px;
+	padding: 0;
+	margin: 0;
 }
 
 .box_prod {
