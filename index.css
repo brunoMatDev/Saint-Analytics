@@ -373,7 +373,8 @@ p, li, span {
 .Servicios{
   scroll-snap-align: start; /* Alinear al inicio de la sección */
   scroll-snap-stop: always;
-  height: 100vh; /* Cada sección tiene la altura completa de la pantalla */
+  min-height: 100vh; /* Cada sección tiene la altura completa de la pantalla */
+  margin-bottom: 10vh;
 }
 
 .title-section{
@@ -1103,11 +1104,11 @@ textarea.form-control:focus {
   background-color: #00CED1;
 }
 
-.asd{
+.contact-form{
   background: linear-gradient(180deg, #152340, #040f24); 
   border-radius: 1rem;
   font-size: 1.5rem;
-  width: 35%;
+  width: 45%;
   padding: 1rem;
 }
 
@@ -1126,12 +1127,16 @@ textarea.form-control:focus {
   padding-left: 4rem;
 }
 
-
+.contacto-info{
+  color: white;
+  width: 50%;
+}
 
 /* Tablets y Ordenadores Portátiles Medianos (hasta 1366px) */
 @media (max-width: 1366px) {
   .grid{
     gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
   }
   .menu2 {
     gap: 2rem;
@@ -1179,9 +1184,6 @@ textarea.form-control:focus {
     padding-top: 2rem;
     padding-left: 1.5rem;
   }
-  .contacto-info{
-    padding-left: 0rem;
-  }
   .contacto-info h2{
     padding-top: 1rem;
     font-size: 3rem;
@@ -1190,7 +1192,6 @@ textarea.form-control:focus {
   .contacto-info h4{
     padding-top: 2rem;
     padding-left: 2rem;
-    padding-right: 5rem;
   }
 }
 
@@ -1200,7 +1201,7 @@ textarea.form-control:focus {
   }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   .navbar {
     padding-bottom: 2rem;
     padding-top: 2rem;
@@ -1231,6 +1232,21 @@ textarea.form-control:focus {
       width: 100%;
       padding: 0.5rem 0;
     }
+
+    .contacto-info{
+      padding: 0rem;
+      width: 80%;
+      text-align: center;
+    }
+
+    .contacto{
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .contact-form{
+      width: 80%;
+    }
   }
 
   
@@ -1254,7 +1270,8 @@ textarea.form-control:focus {
     .iconsCELU {
       width: 6vw; /* Ajusta el tamaño del icono */
     }
-    }
+
+  }
     
     @media screen and (max-width: 480px) {
     .liCELU {
@@ -1274,7 +1291,6 @@ textarea.form-control:focus {
 
     .container-contacto{
       justify-content: center !important;
-
     }
 
     }
