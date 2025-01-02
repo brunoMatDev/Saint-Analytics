@@ -22,20 +22,19 @@ app.post('/send-email', async (req, res) => {
   try {
     // Configuración del transportador
     const transporter = nodemailer.createTransport({
-    /*host: 'smpt.hostinger.com',
-      port: 587,
-      secure: false,*/ 
-      service: 'gmail',
+    host: 'smtp.hostinger.com',
+      port: 465,
+      secure: true,
       auth: {
-        user: process.env.EMAIL, // Tu correo Gmail
-        pass: process.env.PASSWORD, // Contraseña o app password
+        user: process.env.EMAIL2, // Tu correo Gmail
+        pass: process.env.PASSWORD2, // Contraseña o app password
       },
     });
 
     // Configuración del correo
     const mailOptions = {
-      from: email, // Correo del remitente
-      to: 'bruno.maturano.dev@gmail.com', // Tu correo de destino
+      from: process.env.EMAIL2, // Correo del remitente
+      to: process.env.EMAIL2, // Tu correo de destino
       subject: `${subject}`,
       text: `Datos del mensaje:\nEnviado por: ${name}\nEmail: ${email}\nTelefono:${phone}\nMensaje:\n${message}`
     };
