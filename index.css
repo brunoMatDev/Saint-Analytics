@@ -128,7 +128,8 @@ p, li, span {
 	position: fixed;
 	z-index: 10;
 	background: linear-gradient(180deg, rgb(22, 35, 63) 0%, rgb(9, 14, 30) 100%);
-	width: 100vw;
+	width: 100%;
+  top: 0;
 	height: 100%;
 	margin-top: 4rem;
 	left: -200%;
@@ -324,13 +325,12 @@ p, li, span {
 }
 .btn-enviar{
   display: flex;
-  width: 125%;
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
 
 .btn-enviar button{
-  width: 80% ;
+  width: 100% ;
   justify-content: center;
 }
 .highlight {
@@ -999,13 +999,14 @@ body {
 .images-container {
   display: flex;
   flex-direction: column; /* Alinea imágenes en columna */
-  gap: 1.3rem; /* Espaciado entre imágenes */
+  gap: 1rem; /* Espaciado entre imágenes */
   padding-top: 1rem;
   padding-bottom: 1rem;
+  align-items: center;
 }
 
 .image-wrapper {
-  width: 60%;
+  width: 100%;
   position: relative;
   overflow: hidden;
   border-radius: 1rem;
@@ -1017,15 +1018,17 @@ body {
   height: auto; /* Mantiene la proporción */
   object-fit: contain; /* Asegura que la imagen se ajuste completamente sin cortarse */
 }
-.image1{
-}
+
 .product-link1{
   position: relative;
-  right: 6rem;
+  width: 55%;
+  right: 4rem;
 }
 .product-link2{
   position: relative;
   left: 6rem;
+  width: 55%;
+
 }
 .image-wrapper img {
   width: 100%;
@@ -1138,6 +1141,7 @@ textarea.form-control:focus {
   display: none;
 }
 
+
 /* Tablets y Ordenadores Portátiles Medianos (hasta 1366px) */
 @media (max-width: 1366px) {
   .grid{
@@ -1174,13 +1178,12 @@ textarea.form-control:focus {
   }
   .product-link1{
     right: 0;
+    width: 80%;
   }
   .product-link2{
     left: 0;
   }
-  .image-wrapper{
-    width: 80%;
-  }
+
   .images-container{
     justify-content: center;
     padding-top: 1rem;
@@ -1250,7 +1253,7 @@ textarea.form-control:focus {
     }
   .principal{
     padding-right: 1rem;
-    padding-left: 1rem;
+    padding-left: 2rem;
   }
     .menu {
       display: none; /* Oculta el menú horizontal en dispositivos pequeños */
@@ -1272,7 +1275,7 @@ textarea.form-control:focus {
     font-size: 2.5rem;
     color:#ffffff;
     position:absolute;
-    right: .3rem;
+    right: 1rem;
     display: flex;
     }
   
@@ -1284,7 +1287,7 @@ textarea.form-control:focus {
 
     .contacto-info{
       padding: 0rem;
-      width: 80%;
+      width: 100%;
       text-align: center;
     }
 
@@ -1293,10 +1296,10 @@ textarea.form-control:focus {
       align-items: center;
       padding-right: 0;
     }
-    
-    .contact-form{
-      width: 80%;
-    }
+   .contact-form{
+    width: 70%;
+   } 
+  
     .Servicios h3{
       text-align: center;
     }
@@ -1319,6 +1322,7 @@ textarea.form-control:focus {
   .navbar .nav-link {
     font-size: 1rem;
   }
+
 }
   /* Media Queries */
   @media screen and (max-width: 768px) {
@@ -1332,6 +1336,22 @@ textarea.form-control:focus {
 
   }
     
+  @media (max-width: 620px) {
+
+    .grid{
+      gap: 1.5rem;
+    }
+    .cert{
+      font-size: 1.7rem;
+      letter-spacing: 0;
+    }
+  
+    .container2{
+      margin-bottom: 13rem;
+    }
+    
+  }
+
     @media screen and (max-width: 480px) {
     .liCELU {
       font-size: 1.8rem; /* Ajuste del texto en pantallas pequeñas */
@@ -1350,6 +1370,26 @@ textarea.form-control:focus {
 
     .container-contacto{
       justify-content: center !important;
+    }
+
+    .cert{
+      font-size: 1.2rem;
+      
+    }
+    .bi-microsoft{
+      font-size: 1.5rem;
+    }
+    .cert img{
+      height: 2em;
+    }
+    .grid{
+      grid-template-columns:repeat(1, 1fr)
+    }
+    .product-link1{
+      width: 100%;
+    }
+    #contact-form{
+      width: 100%;
     }
 
     }

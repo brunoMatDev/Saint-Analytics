@@ -73,6 +73,77 @@ li {
 .dropdown-submenu:hover>.dropdown-menu {
   display: block;
 }
+/*MENU CELU*/
+.menuCELU {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-content: center;
+	position: fixed;
+	z-index: 10;
+	background: linear-gradient(180deg, rgb(22, 35, 63) 0%, rgb(9, 14, 30) 100%);
+	width: 100%;
+  top: 0;
+	height: 100%;
+	margin-top: 4rem;
+	left: -200%;
+	transition: 0.6s ease-in-out;
+  }
+  
+  .menuCELU.active {
+	left: 0; /* Muestra el menú cuando esté activo */
+  }
+  
+  .liCELU {
+	justify-content: center;
+	font-size: 2.5rem; /* Tamaño del texto */
+	padding: 1rem 0;
+	text-align: center;
+	color: #ffffff; /* Texto blanco */
+	transition: all 0.3s ease-in-out;
+	box-shadow: 0 7px 16px rgba(0, 0, 0, 0.2); /* Sombra ligera */
+  }
+  
+  .aCELU {
+	text-decoration: none; /* Elimina subrayado */
+	color: #ffffff; /* Mantiene el texto blanco */
+	font-weight: 500; /* Grosor del texto */
+  }
+  
+  .aCELU:hover {
+	color: #50b7f5; /* Color azul brillante al pasar el mouse */
+  }
+  
+  .ulCELU {
+	margin-top: 3rem;
+	padding: 0;
+	list-style-type: none;
+	width: 100%;
+  }
+  
+  .brandCELU {
+	display: flex;
+	justify-content: center;
+	height: auto;
+	padding-top: 1.6rem;
+  }
+  
+  .redesCELU {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 1rem; /* Espaciado entre íconos */
+	margin-top: 2rem;
+  }
+  
+  .redesCELU a {
+	padding: 0.5rem;
+  }
+  
+  .iconsCELU {
+	width: 40px; /* Ajuste para íconos más pequeños */
+	height: auto;
+  }
 
 
 /* Ajustes responsive de la Navbar */
@@ -112,6 +183,7 @@ li {
     padding: 0.5rem 0;
   }
 }
+
 
 /* Tablets y Ordenadores Portátiles Medianos (hasta 1366px) */
 @media (max-width: 1366px) {
@@ -252,6 +324,50 @@ body {
   color: #1c68f5;
   font-weight: 1900;
 }
+
+@media (max-width: 992px) {
+  .navbar {
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+    }
+  .principal{
+    padding-right: 1rem;
+    padding-left: 2rem;
+  }
+    .menu {
+      display: none; /* Oculta el menú horizontal en dispositivos pequeños */
+    }
+  
+    .menu2 {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    margin-bottom: 1rem;
+    }
+    .container2{
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  
+    .navbar-toggler {
+      background: none;
+    font-size: 2.5rem;
+    color:#ffffff;
+    position:absolute;
+    right: 1rem;
+    display: flex;
+    }
+  
+    .nav-link {
+      text-align: center;
+      width: 100%;
+      padding: 0.5rem 0;
+    }
+    .content{
+      margin-left: 4rem;
+      margin-right: 4rem;
+    }
+  }
 
 @media (max-width: 768px) {
   .container {
