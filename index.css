@@ -1156,6 +1156,7 @@ textarea.form-control:focus {
     font-size: 3rem;
     padding-bottom: 0rem;
     padding-left: 1rem;
+    padding-right: 1rem;
   }
   .product-link1{
     right: 0;
@@ -1331,6 +1332,12 @@ textarea.form-control:focus {
   }
 
     @media screen and (max-width: 480px) {
+      .contacto{
+        padding: 1rem;
+      }
+      .Servicios{
+        padding: 1rem;
+      }
     .liCELU {
       font-size: 1.8rem; /* Ajuste del texto en pantallas pequeñas */
     }
@@ -1368,6 +1375,10 @@ textarea.form-control:focus {
     }
     #contact-form{
       width: 100%;
+    }
+    .container2{
+      margin-top: 10rem;
+      margin-bottom: 8rem;
     }
 
     }

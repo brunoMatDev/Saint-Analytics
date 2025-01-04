@@ -145,6 +145,45 @@ li {
 	height: auto;
   }
 
+  .overlap-3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #19294E;
+    padding: 0 1rem;
+  }
+  
+  .mail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .redes {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .zt-mail-icons {
+    width: 5vw;
+    height: auto;
+    max-width: 25px;
+    min-width: 15px;
+  }
+  
+  .text-wrapper-18 {
+    color: #ffffff;
+  }
+  
+  .presentacion {
+    padding-bottom: 1rem;
+    font-size: 1.3rem;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    /* Bold */
+  } 
 
 /* Ajustes responsive de la Navbar */
 
@@ -301,7 +340,7 @@ body {
 .section p {
   margin-bottom: 15px;
   font-family: 'Roboto', sans-serif;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 1rem;
   padding-left: 2.5rem;
 }
@@ -348,7 +387,13 @@ body {
       padding-left: 1rem;
       padding-right: 1rem;
     }
-  
+    .img{
+      padding-bottom: 1rem;
+    }
+    .imgOBJ{
+      width: 100%;
+      padding: 1rem
+    }
     .navbar-toggler {
       background: none;
     font-size: 2.5rem;
@@ -367,61 +412,32 @@ body {
       margin-left: 4rem;
       margin-right: 4rem;
     }
+    .redes{
+      display: none;
+    }
+    .info{
+      padding-right: 0;
+    }
   }
 
 @media (max-width: 768px) {
-  .container {
-    padding: 15px;
-  }
 
   header h1 {
     font-size: 1.5rem;
   }
-
-  .section h2 {
-    font-size: 1.2rem;
+  .content{
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  .section{
+    padding: 1.5rem;
+  }
+  .section p{
+    padding-left: 1.5rem;
+    letter-spacing: .02rem;
   }
 }
 
 
 
 
-.overlap-3 {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #19294E;
-  padding: 0 1rem;
-}
-
-.mail {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.redes {
-  display: flex;
-  gap: 1rem;
-}
-
-.zt-mail-icons {
-  width: 5vw;
-  height: auto;
-  max-width: 25px;
-  min-width: 15px;
-}
-
-.text-wrapper-18 {
-  color: #ffffff;
-}
-
-.presentacion {
-  padding-bottom: 1rem;
-  font-size: 1.3rem;
-  text-align: center;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 700;
-  /* Bold */
-} 
