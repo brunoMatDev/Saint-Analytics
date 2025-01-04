@@ -97,9 +97,6 @@
 
 html{
   scroll-behavior:smooth; /* Desplazamiento suave al hacer clic en un enlace */
-  scroll-snap-type: y mandatory; /* Snap en dirección vertical */
-  overflow-y: scroll; /* Habilitar desplazamiento vertical */
-
 }
 /* Títulos - Condensed Light */
 h1, h2, h3, h4, h5, h6 {
@@ -373,7 +370,6 @@ p, li, span {
 
 .Servicios{
   scroll-snap-align: start; /* Alinear al inicio de la sección */
-  scroll-snap-stop: always;
   min-height: 100vh; /* Cada sección tiene la altura completa de la pantalla */
   margin-bottom: 10vh;
 }
