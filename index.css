@@ -10,49 +10,48 @@
 }
 
 /*NAV BAR*/
-.navbar {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: .5rem .5rem;
-  background: linear-gradient(180deg, rgba(9, 14, 30, 0.89) 0%, rgba(9, 14, 30, 0.28) 100%);
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-  
-}
+  .navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem .5rem;
+    background: linear-gradient(180deg, rgba(9, 14, 30, 0.89) 0%, rgba(9, 14, 30, 0.28) 100%);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
 
-.navbar-brand {
-  position: absolute;
-  left: 1rem;
-}
-.menu2 {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-}
+  .navbar-brand {
+    position: absolute;
+    left: 1rem;
+  }
+  .menu2 {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
 
-.menu {
-  display: flex;
-  justify-content: center;
-  flex-grow: 1;
-}
+  .menu {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+  }
 
-.navbar .nav-link {
-  color: #ffffff;
-  font-size: 1rem;
-  transition: color 0.3s;
-}
+  .navbar .nav-link {
+    color: #ffffff;
+    font-size: 1rem;
+    transition: color 0.3s;
+  }
 
-.navbar .nav-link:hover,
-.navbar .nav-link:active {
-  color: #05caf2;
-}
+  .navbar .nav-link:hover,
+  .navbar .nav-link:active {
+    color: #05caf2;
+  }
 
-.navbar .nav-item:last-child {
-  margin-right: 0;
-}
+  .navbar .nav-item:last-child {
+    margin-right: 0;
+  }
 
 
 /*BODY PRINCIPAL*/
@@ -64,7 +63,6 @@
   box-sizing: border-box;
   font-family: 'Roboto Condensed', sans-serif;
   height: 100%;
-
 }
 
 .certificaciones{
@@ -114,10 +112,6 @@ h2, h3, h4 {
 p, li, span {
   font-weight: 400; /* Regular */
 }
-
-
-
-
 
 /*MENU CELU*/
 .menuCELU {
@@ -281,18 +275,6 @@ p, li, span {
 .slider .slide {
   height: 100px;
   width: 250px;
-}
-
-
-/*PRIMERA SECCION*/
-@media (min-width: 1440px) {
-  .menu2 {
-    gap: 2.5rem;
-  }
-
-  .navbar .nav-link {
-    font-size: 1rem;
-  }
 }
 
 /* Main Content Styling */
@@ -1138,7 +1120,6 @@ textarea.form-control:focus {
   display: none;
 }
 
-/* Tablets y Ordenadores Portátiles Medianos (hasta 1366px) */
 @media (max-width: 1366px) {
   .grid{
     gap: 1rem;
@@ -1308,9 +1289,6 @@ textarea.form-control:focus {
     }
   }
 
-  
-
-/* Ordenadores de Escritorio Grandes (1440px en adelante) */
 @media (min-width: 1440px) {
   .menu2 {
     gap: 2.5rem;

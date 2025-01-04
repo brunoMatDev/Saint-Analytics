@@ -70,13 +70,6 @@
 
 /* Dispositivos pequeños: Móvil (hasta 720px) */
 @media (max-width: 720px) {
-  .navbar-collapse {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    background-color: rgba(9, 14, 30, 0.9);
-    padding: 1rem;
-  }
 
   .menu {
     display: none; /* Oculta el menú horizontal en dispositivos pequeños */
@@ -86,13 +79,6 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-  }
-
-  .navbar-toggler {
-    display: flex; /* Muestra el botón hamburguesa en pantallas pequeñas */
-    align-items: center;
-    border: none;
-    background: none;
   }
 
   .nav-link {
