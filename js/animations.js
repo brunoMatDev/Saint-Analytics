@@ -52,37 +52,26 @@ let button = document.getElementById('burguer');
 let body = document.getElementById('body');
 let logoNavBar = document.getElementById('logonav')
 
+let icon = button.querySelector('i');
+
+
 button.addEventListener('click', function(){
     if(MenuCelu.style.left == '0px'){
         body.style.overflow = 'auto';
-        MenuCelu.style.left = '-100%';
+        MenuCelu.style.left = '-200%';
         logoNavBar.style.visibility = 'visible';
+
+        // Cambiar el ícono a bi-list
+        icon.classList.remove('bi-x-lg');
+        icon.classList.add('bi-list');
     }else{
         body.style.overflow = 'hidden';
         MenuCelu.style.left = '0px';
         logoNavBar.style.visibility = 'hidden';
 
+        icon.classList.remove('bi-list');
+        icon.classList.add('bi-x-lg');
     }
 })
-
-document.querySelector('#contact-form').addEventListener('submit', async (e) => {
-    e.preventDefault();
-  
-    const formData = new FormData(e.target);
-    const data = Object.fromEntries(formData);
-  
-    const response = await fetch('http://localhost:3000/send-email', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(data),
-    });
-  
-    const result = await response.json();
-    if (result.success) {
-      alert('Correo enviado exitosamente.');
-    } else {
-      alert('Error al enviar el correo: ' + result.message);
-    }
-  });
-  
+    
 

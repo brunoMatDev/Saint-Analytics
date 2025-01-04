@@ -57,8 +57,46 @@
   
   /* Ajustes responsive de la Navbar */
   
-  /* Dispositivos pequeños: Móvil (hasta 720px) */
-  
+  /* Dispositivos pequeños: Móvil (hasta 991px) */
+  @media (max-width: 991px){
+    .navbar-collapse {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        background-color: rgba(9, 14, 30, 0.9);
+        padding: 1rem;
+      }
+    
+      .navbar {
+        padding-bottom: 2rem;
+        padding-top: 2rem;
+      }
+    
+      .menu {
+        display: none; /* Oculta el menú horizontal en dispositivos pequeños */
+      }
+    
+      .menu2 {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 1rem;
+      }
+    
+      .navbar-toggler {
+        background: none;
+        font-size: 2.5rem;
+        color:#ffffff;
+        position:absolute;
+        right: .3rem;
+      }
+    
+      .nav-link {
+        text-align: center;
+        width: 100%;
+        padding: 0.5rem 0;
+      }
+  }
   
   /* Tablets y Ordenadores Portátiles Medianos (hasta 1366px) */
   @media (max-width: 1366px) {

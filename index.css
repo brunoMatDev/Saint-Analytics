@@ -135,7 +135,7 @@ p, li, span {
 	height: 100%;
 	margin-top: 4rem;
 	left: -200%;
-	transition: 0.8s ease-in-out;
+	transition: 0.6s ease-in-out;
   }
   
   .menuCELU.active {
@@ -366,21 +366,23 @@ p, li, span {
 }
 
 .btn-p{
-  padding-top: 2rem;
+  padding-top: 4rem;
   padding-left: 2rem;
+  padding-bottom: 2rem;
 }
 
 .Servicios{
   scroll-snap-align: start; /* Alinear al inicio de la sección */
   scroll-snap-stop: always;
-  height: 100vh; /* Cada sección tiene la altura completa de la pantalla */
+  min-height: 100vh; /* Cada sección tiene la altura completa de la pantalla */
+  margin-bottom: 10vh;
 }
 
 .title-section{
   color: white;
   font-size: 2rem;
-  padding-left: 4rem;
-  padding-top: 3rem;
+  padding-left: 5rem;
+  padding-top: 4rem;
   padding-bottom: 2rem;
 }
 body {
@@ -972,7 +974,7 @@ body {
   background-color: #19294E;
   padding-left: 3rem;
   padding-right: 2rem;
-  padding-bottom: 2rem;
+  padding-bottom: 3rem;
   padding-top: 2rem;
 }
 
@@ -1103,19 +1105,18 @@ textarea.form-control:focus {
   background-color: #00CED1;
 }
 
-.asd{
+.contact-form{
   background: linear-gradient(180deg, #152340, #040f24); 
   border-radius: 1rem;
   font-size: 1.5rem;
   width: 35%;
-  padding: 1rem;
 }
 
 .contacto{
   scroll-snap-align: start; /* Alinear al inicio de la sección */
   display: flex;
-  padding-top: 3rem;
   padding-bottom: 3rem;
+  padding-top: 3rem;
   padding-left: 2rem;
   padding-right: 2rem;
   gap: 8rem;
@@ -1123,15 +1124,28 @@ textarea.form-control:focus {
 
 .contacto-info h4{
   color: white;
-  padding-left: 4rem;
+  padding-left: 3rem;
+  padding-right: 2rem;
+}
+.contacto-info h2{
+  color: white;
+  padding-left: 3rem;
+  padding-top: 1rem;
 }
 
-
+.contacto-info{
+  color: white;
+  width: 50%;
+}
+.CEL{
+  display: none;
+}
 
 /* Tablets y Ordenadores Portátiles Medianos (hasta 1366px) */
 @media (max-width: 1366px) {
   .grid{
     gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
   }
   .menu2 {
     gap: 2rem;
@@ -1146,12 +1160,15 @@ textarea.form-control:focus {
     padding-right: 2rem;
   }
   .Productos{
-    padding-left: 1.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
   .Productos h3{
     font-size: 3rem;
-    padding-bottom: 3rem;
+    padding-bottom: 2.5rem;
     padding-top: 1rem;
+    text-align: center;
+    padding-left: 0;
   }
   .title-section{
     font-size: 3rem;
@@ -1168,6 +1185,7 @@ textarea.form-control:focus {
     width: 80%;
   }
   .images-container{
+    justify-content: center;
     padding-top: 1rem;
   }
   .descript h1{
@@ -1178,19 +1196,47 @@ textarea.form-control:focus {
     gap: 1rem;
     padding-top: 2rem;
     padding-left: 1.5rem;
+    flex-direction: column;
+    align-items: center;
   }
-  .contacto-info{
-    padding-left: 0rem;
+  .cont-prod h4{
+    padding-left: 0;
   }
   .contacto-info h2{
     padding-top: 1rem;
     font-size: 3rem;
-    padding-left: 2rem;
+    padding-left: 0;
+    text-align: center;
   }
   .contacto-info h4{
     padding-top: 2rem;
-    padding-left: 2rem;
-    padding-right: 5rem;
+    padding-left: 0;
+    text-align: center;
+    padding-right: 0;
+  }
+  .contact-form{
+    width: 55%;
+  }
+  .Productos .cont-prod {
+    display:flex;
+    flex-direction: column; /* Mantiene la alineación general */
+    align-items: center;
+  }
+  .images-container {
+    display: none;
+    gap: 0;
+  }
+  .descript {
+    text-align: center;
+  }
+  .CEL{
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 4rem;
+  }
+  .btn-p{
+    padding-top: 1rem;
+    padding-left: 0;
   }
 }
 
@@ -1205,7 +1251,10 @@ textarea.form-control:focus {
     padding-bottom: 2rem;
     padding-top: 2rem;
     }
-  
+  .principal{
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
     .menu {
       display: none; /* Oculta el menú horizontal en dispositivos pequeños */
     }
@@ -1215,6 +1264,10 @@ textarea.form-control:focus {
       align-items: center;
       width: 100%;
     margin-bottom: 1rem;
+    }
+    .container2{
+      padding-left: 1rem;
+      padding-right: 1rem;
     }
   
     .navbar-toggler {
@@ -1230,6 +1283,31 @@ textarea.form-control:focus {
       text-align: center;
       width: 100%;
       padding: 0.5rem 0;
+    }
+
+    .contacto-info{
+      padding: 0rem;
+      width: 80%;
+      text-align: center;
+    }
+
+    .contacto{
+      flex-direction: column;
+      align-items: center;
+      padding-right: 0;
+    }
+    
+    .contact-form{
+      width: 80%;
+    }
+    .Servicios h3{
+      text-align: center;
+    }
+    .redes{
+      display: none;
+    }
+    .info{
+      padding-right: 0;
     }
   }
 
@@ -1254,7 +1332,8 @@ textarea.form-control:focus {
     .iconsCELU {
       width: 6vw; /* Ajusta el tamaño del icono */
     }
-    }
+
+  }
     
     @media screen and (max-width: 480px) {
     .liCELU {
@@ -1274,7 +1353,6 @@ textarea.form-control:focus {
 
     .container-contacto{
       justify-content: center !important;
-
     }
 
     }
