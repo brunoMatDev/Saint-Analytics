@@ -222,6 +222,27 @@ p, li, span {
   max-width: 25px;
   min-width: 15px;
 }
+.img-cont{
+  display: flex;
+  justify-content: center;
+  margin-left: 8rem;
+  margin-right: 8rem;
+  margin-top: 6rem;
+  margin-bottom: 5rem;
+}
+
+.img{
+  height: 80%;
+  width: 80%;
+}
+
+.img-tit{
+  padding-left: 5rem;
+  padding-top: 4rem;
+  color: white;
+  font-size: 2rem;
+
+}
 
 /*CARROUSEL*/
 
@@ -231,52 +252,52 @@ p, li, span {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-250px * 7));
+    transform: translateX(-50%); /* Mover solo la mitad del ancho total */
   }
 }
+
 @keyframes scroll {
   0% {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-250px * 7));
+    transform: translateX(calc(-250px * 3));
   }
 }
+
 .slider {
-  background: white;
+  background-color: #020f2c;
   box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
   height: 100px;
   margin: auto;
   overflow: hidden;
   position: relative;
 }
-.slider::before, .slider::after {
-  background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
-  content: "";
-  height: 100px;
-  position: absolute;
-  width: 200px;
-  z-index: 2;
-}
+
 .slider::after {
   right: 0;
   top: 0;
   transform: rotateZ(180deg);
 }
+
 .slider::before {
   left: 0;
   top: 0;
 }
+
 .slider .slide-track {
-  -webkit-animation: scroll 40s linear infinite;
-          animation: scroll 40s linear infinite;
   display: flex;
-  width: calc(250px * 14);
+  gap: 8rem;
+  width: calc(250px * 12); /* Duplicar las imágenes */
+  -webkit-animation: scroll 10s linear infinite;
+  animation: scroll 10s linear infinite;
 }
-.slider .slide {
-  height: 100px;
-  width: 250px;
+
+.slide img{ 
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
+
 
 /* Main Content Styling */
 * {
@@ -1090,7 +1111,7 @@ textarea.form-control:focus {
   background: linear-gradient(180deg, #152340, #040f24); 
   border-radius: 1rem;
   font-size: 1.5rem;
-  width: 45%;
+  width: 35%;
   padding: 1rem;
 }
 
@@ -1313,9 +1334,10 @@ textarea.form-control:focus {
       width: 6vw; /* Ajusta el tamaño del icono */
     }
 
+
   }
     
-  @media (max-width: 620px) {
+  @media (max-width: 660px) {
 
     .grid{
       gap: 1.5rem;
@@ -1324,14 +1346,14 @@ textarea.form-control:focus {
       font-size: 1.7rem;
       letter-spacing: 0;
     }
-  
+    
     .container2{
       margin-bottom: 13rem;
     }
     
   }
 
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: 500px) {
       .contacto{
         padding: 1rem;
       }
@@ -1368,7 +1390,10 @@ textarea.form-control:focus {
       height: 2em;
     }
     .grid{
-      grid-template-columns:repeat(1, 1fr)
+      grid-template-columns:repeat(1, 1fr);
+      padding-right: 1rem;
+      gap:2rem;
+      padding-left: 1rem;
     }
     .product-link1{
       width: 100%;
