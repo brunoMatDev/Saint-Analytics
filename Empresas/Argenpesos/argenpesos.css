@@ -151,6 +151,8 @@ li {
     align-items: center;
     background-color: #19294E;
     padding: 0 1rem;
+    font-weight: 400;
+
   }
   
   .mail {
