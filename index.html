@@ -351,16 +351,16 @@
           <img src="/images/Logos/Argenpesos_color.png" height="100" width="250" alt="Logo AP" />
         </div>
         <div class="slide">
-          <img src="/images/Logos/EPB_color.png" height="100" width="250" alt="Logo EPB" />
+          <img class="log" src="/images/Logos/EPB_color.png" width="250" alt="Logo EPB" />
         </div>
         <div class="slide">
-          <img src="/images/Logos/SILENCE-removebg-preview.png" height="100" width="250" alt="Logo EPB" />
+          <img class="log" src="/images/Logos/SILENCE-removebg-preview.png" width="250" alt="Logo EPB" />
         </div>
         <div class="slide">
-          <img  class="proy" src="/images/Logos/project-nude.png" height="100" width="350" alt="Logo EPB" />
+          <img class="log" src="/images/Logos/project-nude.png" width="350" alt="Logo EPB" />
         </div>
         <div class="slide">
-          <img  class="proy" src="/images/Logos/dallas.png" height="100" width="350" alt="Logo EPB" />
+          <img class="dallas" src="/images/Logos/dallas.png" width="250" alt="Logo EPB" />
         </div>
         <!-- Duplicar las imágenes para efecto continuo -->
         <div class="slide">
@@ -370,16 +370,16 @@
           <img src="/images/Logos/Argenpesos_color.png" height="100" width="250" alt="Logo AP" />
         </div>
         <div class="slide">
-          <img src="/images/Logos/EPB_color.png" height="100" width="250" alt="Logo EPB" />
+          <img class="log" src="/images/Logos/EPB_color.png" width="250" alt="Logo EPB" />
         </div>
         <div class="slide">
-          <img src="/images/Logos/SILENCE-removebg-preview.png" height="100" width="250" alt="Logo EPB" />
+          <img class="log" src="/images/Logos/SILENCE-removebg-preview.png" width="250" alt="Logo EPB" />
         </div>
         <div class="slide">
-          <img  class="proy" src="/images/Logos/project-nude.png" height="100" width="350" alt="Logo EPB" />
+          <img class="log" src="/images/Logos/project-nude.png" width="350" alt="Logo EPB" />
         </div>
         <div class="slide">
-          <img  class="proy" src="/images/Logos/dallas.png" height="100" width="350" alt="Logo EPB" />
+          <img class="dallas" src="/images/Logos/dallas.png" width="250" alt="Logo EPB" />
         </div>
         <div class="slide">
           <img src="/images/Logos/AP_color.png" height="100" width="150" alt="Logo Argenpesos" />
@@ -388,21 +388,21 @@
           <img src="/images/Logos/Argenpesos_color.png" height="100" width="250" alt="Logo AP" />
         </div>
         <div class="slide">
-          <img src="/images/Logos/EPB_color.png" height="100" width="250" alt="Logo EPB" />
+          <img class="log" src="/images/Logos/EPB_color.png" width="250" alt="Logo EPB" />
         </div>
         <div class="slide">
-          <img src="/images/Logos/SILENCE-removebg-preview.png" height="100" width="250" alt="Logo EPB" />
+          <img class="log" src="/images/Logos/SILENCE-removebg-preview.png" width="250" alt="Logo EPB" />
         </div>
         <div class="slide">
-          <img  class="proy" src="/images/Logos/project-nude.png" height="100" width="350" alt="Logo EPB" />
+          <img class="log" src="/images/Logos/project-nude.png" width="350" alt="Logo EPB" />
         </div>
         <div class="slide">
-          <img  class="proy" src="/images/Logos/dallas.png" height="100" width="350" alt="Logo EPB" />
+          <img class="dallas" src="/images/Logos/dallas.png" width="250" alt="Logo EPB" />
         </div>
-        
+
       </div>
     </div>
-    
+
     <section class="contacto" id="Contacto">
       <div class="contacto-info">
         <h2 class="title-section">CONTACTANOS</h2>
@@ -410,6 +410,9 @@
           Contanos tus desafíos y encontrá la solución ideal para tu negocio.<br><br>
           Coordiná una reunión con nuestros expertos, <span class="text-info">sin costo ni compromiso nuevo.</span>
         </h4>
+        <div class="content-img">
+          <img class="img1" src="/images/vector-1552354_1280-removebg-preview.png" alt="">
+        </div>
       </div>
       <div class="contact-form">
         <form id="contact-form" class="text-light p-4 rounded">
@@ -427,17 +430,22 @@
           </div>
           <div class="mb-3">
             <label for="subject" class="form-label">Asunto</label>
-            <input type="text" class="form-control" name="subject" id="subject" placeholder="Motivo del contacto">
+            <input type="text" class="form-control" name="subject" id="subject" placeholder="Motivo del contacto" required>
           </div>
           <div class="mb-3">
             <label for="message" class="form-label">Mensaje</label>
             <textarea class="form-control" name="message" id="message" rows="4"
-              placeholder="Escribí tu mensaje aquí"></textarea>
+              placeholder="Escribí tu mensaje aquí" required></textarea>
           </div>
           <div class="btn-enviar">
             <button type="submit" id="button" class="demo-btn">Enviar</button>
           </div>
-        
+          <div class="alert alert-success d-none" role="alert">
+            Mensaje enviado con éxito!
+          </div>
+          <div class="alert alert-danger d-none" role="alert">
+            Algo salio mal, por favor intenta nuevamente.
+          </div>
         </form>
       </div>
     </section>
@@ -478,17 +486,37 @@
 
     document.getElementById("contact-form").addEventListener("submit", function (event) {
       event.preventDefault(); // Evita el envío estándar del formulario
-
+      const alertG = document.getElementsByClassName("alert-success");
+      const alertR = document.getElementsByClassName("alert-danger");
       const serviceID = "service_saint"; // Reemplaza con tu Service ID
       const templateID = "template_423ddzm"; // Reemplaza con tu Template ID
 
       emailjs.sendForm(serviceID, templateID, this).then(
         function () {
-          alert("¡Mensaje enviado con éxito!");
+          alertG.classList.remove('d-none');
+          alertG.classList.add('show');
+
+          // Configurar la duración (5000 ms = 5 segundos)
+          setTimeout(() => {
+            alertElement.classList.add('fade-out'); // Inicia el fade-out
+            setTimeout(() => {
+              alertElement.classList.add('d-none'); // Ocultar la alerta
+              alertElement.classList.remove('show', 'fade-out'); // Resetear las clases
+            }, 1000); // Espera el tiempo de la animación de fadeOut
+          }, 5000);
         },
         function (error) {
-          alert("Ocurrió un error al enviar el mensaje. Por favor, intenta nuevamente.");
-          console.error("Error:", error);
+          alertR.classList.remove('d-none');
+          alertR.classList.add('show');
+
+          // Configurar la duración (5000 ms = 5 segundos)
+          setTimeout(() => {
+            alertElement.classList.add('fade-out'); // Inicia el fade-out
+            setTimeout(() => {
+              alertElement.classList.add('d-none'); // Ocultar la alerta
+              alertElement.classList.remove('show', 'fade-out'); // Resetear las clases
+            }, 1000); // Espera el tiempo de la animación de fadeOut
+          }, 5000);
         }
       );
     });

@@ -230,6 +230,9 @@ p, li, span {
   margin-top: 6rem;
   margin-bottom: 5rem;
 }
+.log{
+  margin-top: .8rem;
+}
 
 .img{
   height: 90%;
@@ -298,9 +301,9 @@ p, li, span {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
-.slide .proy{
-  padding-bottom: 1.3rem;
-}
+
+
+
 
 
 
@@ -1118,7 +1121,10 @@ textarea.form-control:focus {
   border-radius: 1rem;
   font-size: 1.5rem;
   width: 35%;
-  padding: 1rem;
+  padding-top: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  height: 90%;
 }
 
 .contacto{
@@ -1149,6 +1155,35 @@ textarea.form-control:focus {
 .CEL{
   display: none;
 }
+.content-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.img1{
+  margin-top: 4.5rem;
+  width: 20rem; /* Ajusta el tamaño de las imágenes */
+  height: auto; /* Mantén la proporción */
+  transform: rotate(calc(var(--rotation, 0) * 2deg));
+  transition: transform 0.3s; /* Animación suave al rotar */
+}
+
+.alert-success{
+background-color: #02915a;
+color: black;
+border-radius: 1rem;
+}
+.alert-danger{
+background-color: #880c0ca1;
+color: black;
+border-radius: 1rem;
+}
+
+
+
+
 
 
 @media (max-width: 1366px) {
