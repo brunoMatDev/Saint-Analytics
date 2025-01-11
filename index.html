@@ -344,8 +344,8 @@
     </section>
     <div class="slider">
       <div class="slide-track">
-        <div class="slide">
-          <img src="/images/Logos/AP_color.png" height="100" width="150" alt="Logo Argenpesos" />
+        <div >
+          <img class="ap" src="/images/Logos/AP_color.png"   alt="Logo Argenpesos" />
         </div>
         <div class="slide">
           <img src="/images/Logos/Argenpesos_color.png" height="100" width="250" alt="Logo AP" />
@@ -356,15 +356,15 @@
         <div class="slide">
           <img class="log" src="/images/Logos/SILENCE-removebg-preview.png" width="250" alt="Logo EPB" />
         </div>
-        <div class="slide">
-          <img class="log" src="/images/Logos/project-nude.png" width="350" alt="Logo EPB" />
+        <div>
+          <img class="nude"  src="/images/Logos/nude.png"  width="300" alt="Logo EPB" />
         </div>
-        <div class="slide">
+        <div class="">
           <img class="dallas" src="/images/Logos/dallas.png" width="250" alt="Logo EPB" />
         </div>
         <!-- Duplicar las imágenes para efecto continuo -->
-        <div class="slide">
-          <img src="/images/Logos/AP_color.png" height="100" width="150" alt="Logo Argenpesos" />
+        <div >
+          <img class="ap" src="/images/Logos/AP_color.png"   alt="Logo Argenpesos" />
         </div>
         <div class="slide">
           <img src="/images/Logos/Argenpesos_color.png" height="100" width="250" alt="Logo AP" />
@@ -375,14 +375,13 @@
         <div class="slide">
           <img class="log" src="/images/Logos/SILENCE-removebg-preview.png" width="250" alt="Logo EPB" />
         </div>
-        <div class="slide">
-          <img class="log" src="/images/Logos/project-nude.png" width="350" alt="Logo EPB" />
+        <div>
+          <img class="nude"  src="/images/Logos/nude.png"  width="300" alt="Logo EPB" />
         </div>
-        <div class="slide">
+        <div class="">
           <img class="dallas" src="/images/Logos/dallas.png" width="250" alt="Logo EPB" />
-        </div>
-        <div class="slide">
-          <img src="/images/Logos/AP_color.png" height="100" width="150" alt="Logo Argenpesos" />
+        </div><div >
+          <img class="ap" src="/images/Logos/AP_color.png"   alt="Logo Argenpesos" />
         </div>
         <div class="slide">
           <img src="/images/Logos/Argenpesos_color.png" height="100" width="250" alt="Logo AP" />
@@ -393,10 +392,10 @@
         <div class="slide">
           <img class="log" src="/images/Logos/SILENCE-removebg-preview.png" width="250" alt="Logo EPB" />
         </div>
-        <div class="slide">
-          <img class="log" src="/images/Logos/project-nude.png" width="350" alt="Logo EPB" />
+        <div>
+          <img class="nude"  src="/images/Logos/nude.png"  width="300" alt="Logo EPB" />
         </div>
-        <div class="slide">
+        <div class="">
           <img class="dallas" src="/images/Logos/dallas.png" width="250" alt="Logo EPB" />
         </div>
 
@@ -430,24 +429,31 @@
           </div>
           <div class="mb-3">
             <label for="subject" class="form-label">Asunto</label>
-            <input type="text" class="form-control" name="subject" id="subject" placeholder="Motivo del contacto" required>
+            <input type="text" class="form-control" name="subject" id="subject" placeholder="Motivo del contacto"
+              required>
           </div>
           <div class="mb-3">
             <label for="message" class="form-label">Mensaje</label>
-            <textarea class="form-control" name="message" id="message" rows="4"
-              placeholder="Escribí tu mensaje aquí" required></textarea>
+            <textarea class="form-control" name="message" id="message" rows="4" placeholder="Escribí tu mensaje aquí"
+              required></textarea>
           </div>
           <div class="btn-enviar">
             <button type="submit" id="button" class="demo-btn">Enviar</button>
           </div>
-          <div class="alert alert-success d-none" role="alert">
-            Mensaje enviado con éxito!
-          </div>
-          <div class="alert alert-danger d-none" role="alert">
-            Algo salio mal, por favor intenta nuevamente.
-          </div>
         </form>
-      </div>
+        
+        <div id="alertR" class="col-sm-12 d-none">
+          <div class="alert fade alert-simple alert-success alert-dismissible text-left font__family-montserrat font__size-16 font__weight-light brk-library-rendered rendered show">
+            <button type="button" class="close font__size-18" data-dismiss="alert">
+              <span aria-hidden="true"><a>
+                  <i class="fa fa-times greencross"></i>
+                </a></span>
+              <span class="sr-only">Close</span>
+            </button>
+            <i class="start-icon far fa-check-circle faa-tada animated"></i>
+            <strong class="font__weight-semibold">Well done!</strong> You successfullyread this important.
+          </div>
+        </div>
     </section>
   </main>
 
@@ -484,39 +490,45 @@
       emailjs.init("-qEJ03xGsxAV5GLDO"); // Reemplaza con tu User ID de EmailJS
     })();
 
+    function MostrarAlerta(alerta) {
+      alerta.classList.add('mostrar');
+      alerta.classList.remove('ocultar');
+    }
+
+    function OcultarAlerta(alerta) {
+      alerta.classList.add('d-none');
+      alerta.classList.remove('show', 'fade-out'); // Resetear las clases
+    }
+    const form = document.getElementsByClassName("contact-form");
+
     document.getElementById("contact-form").addEventListener("submit", function (event) {
       event.preventDefault(); // Evita el envío estándar del formulario
-      const alertG = document.getElementsByClassName("alert-success");
-      const alertR = document.getElementsByClassName("alert-danger");
-      const serviceID = "service_saint"; // Reemplaza con tu Service ID
+      const alertG = document.getElementById("alertG");
+      const alertR = document.getElementById("alertR");
+      const serviceID = "serviasdast"; // Reemplaza con tu Service ID
       const templateID = "template_423ddzm"; // Reemplaza con tu Template ID
 
       emailjs.sendForm(serviceID, templateID, this).then(
         function () {
           alertG.classList.remove('d-none');
           alertG.classList.add('show');
-
           // Configurar la duración (5000 ms = 5 segundos)
-          setTimeout(() => {
-            alertElement.classList.add('fade-out'); // Inicia el fade-out
-            setTimeout(() => {
-              alertElement.classList.add('d-none'); // Ocultar la alerta
-              alertElement.classList.remove('show', 'fade-out'); // Resetear las clases
-            }, 1000); // Espera el tiempo de la animación de fadeOut
-          }, 5000);
+          setTimeout(function () {
+            OcultarAlerta(alertG);
+          }, 4000);
+
+
+          form.reset();
         },
         function (error) {
           alertR.classList.remove('d-none');
           alertR.classList.add('show');
 
-          // Configurar la duración (5000 ms = 5 segundos)
-          setTimeout(() => {
-            alertElement.classList.add('fade-out'); // Inicia el fade-out
-            setTimeout(() => {
-              alertElement.classList.add('d-none'); // Ocultar la alerta
-              alertElement.classList.remove('show', 'fade-out'); // Resetear las clases
-            }, 1000); // Espera el tiempo de la animación de fadeOut
-          }, 5000);
+          setTimeout(function () {
+            OcultarAlerta(alertR);
+          }, 3000);
+
+
         }
       );
     });
