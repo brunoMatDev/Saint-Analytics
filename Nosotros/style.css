@@ -1,3 +1,28 @@
+/* CSS Variables */
+:root {
+  --primary-color: #05caf2;
+  --primary-gradient: linear-gradient(45deg, #05caf2, #1093B1);
+  --title-gradient: linear-gradient(45deg, #1093B1, #05caf2);
+  --secondary-color: #00e6c3;
+  --text-color: #ffffff;
+  --text-color-muted: rgba(255, 255, 255, 0.8);
+  --bg-dark: linear-gradient(180deg, rgb(22, 35, 63) 0%, rgb(9, 14, 30) 100%);
+  --bg-transparent: rgba(9, 14, 30, 0.89);
+  --transition-speed: 0.3s;
+  --border-radius: 20px;
+  --box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+
+  --dark-blue: #16233f;
+  --light-blue: rgba(5, 202, 242, 0.1);
+  --text-color: #ffffff;
+  --text-muted: rgba(255, 255, 255, 0.8);
+  --gradient-primary: linear-gradient(135deg, #05caf2, #1093B1);
+  --gradient-secondary: linear-gradient(135deg, #00e6c3, #05caf2);
+  --card-bg: rgba(255, 255, 255, 0.05);
+  --card-border: rgba(255, 255, 255, 0.1);
+  --transition: all 0.3s ease;
+}
+
 /* General reset and base styles */
 .body {
   width: 100%;
@@ -8,7 +33,17 @@
   box-sizing: border-box;
   font-family: 'Roboto Condensed', sans-serif;
 }
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
 
+p, li, span {
+  font-weight: 400;
+  color: var(--text-color-muted);
+}
 .navbar {
   display: flex;
   justify-content: center;
@@ -54,16 +89,6 @@
   margin-right: 0;
 }
 
-/* Dropdown menu styles */
-.dropdown-submenu > .dropdown-menu {
-  top: 0;
-  left: 100%;
-  display: none;
-}
-
-.dropdown-submenu:hover > .dropdown-menu {
-  display: block;
-}
 
 
 /* Ajustes responsive de la Navbar */
@@ -131,9 +156,11 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 2rem;
+  padding: 4rem 2rem;
+  margin-top: 60px;
 }
 
+<<<<<<< refs/remotes/Saint-Analytics/main
 .div {
   display: flex;
   justify-content: center;
@@ -158,10 +185,19 @@
   justify-content: center;
   gap: 6rem;
   width: 80%;
+=======
+
+.grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+>>>>>>> local
   max-width: 1200px;
   margin-top: 3rem;
 }
 
+<<<<<<< refs/remotes/Saint-Analytics/main
 .div3 {
   display: flex;
   flex-direction: column;
@@ -192,6 +228,35 @@
     margin-bottom: 1.5rem;
     letter-spacing: 0.1rem;
     font-family: 'Roboto', sans-serif !important;
+=======
+.card{
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: var(--border-radius);
+  padding-top: 1.7rem;
+  padding-left: 2rem;
+  padding-right: 1.5rem;
+  padding-bottom: 1.5rem;
+  transition: transform var(--transition-speed);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--box-shadow);
+}
+
+.title_div {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--text-color);
+  text-align: center;
+  margin: 0rem 0 5rem 1.5rem;
+  letter-spacing: 0.1rem;
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fadeInUp 1s ease-out;
+>>>>>>> local
 }
 
 .text-wrapper-2, .text-wrapper-7, .text-wrapper-10, .text-wrapper-13 {
@@ -201,7 +266,17 @@
   margin-bottom: 0.5rem;
 }
 
+<<<<<<< refs/remotes/Saint-Analytics/main
 .text-wrapper-3, .text-wrapper-8, .text-wrapper-11, .text-wrapper-14 {
+=======
+h2{
+  font-size: 2.7rem;
+  color: white;
+  font-weight:600;
+}
+
+.text-wrapper-8, .text-wrapper-11, .text-wrapper-14 {
+>>>>>>> local
   font-size: 3rem;
   color: #f8f4f880;
 }
@@ -209,8 +284,14 @@
 .experience-clients-container {
   display: flex;
   justify-content: space-between;
+<<<<<<< refs/remotes/Saint-Analytics/main
   gap: 1rem;
   margin-top: 2rem;
+=======
+  gap: 8rem;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+>>>>>>> local
   width: 100%;
   max-width: 1200px;
 }
@@ -308,6 +389,7 @@
 }
 
 
+<<<<<<< refs/remotes/Saint-Analytics/main
 .rectangle {
   width: 60%;
   max-width: 1200px;
@@ -319,16 +401,40 @@
   display: flex;
   align-items: center;
   justify-content: center;
+=======
+/* CTA Section */
+.cta-section {
+  padding-right: 2rem;
+  padding-left: 2rem;
+  padding-bottom: 6rem;
+  padding-top: 2rem;
+  background: radial-gradient(rgba(5, 202, 242, 0.15) 0%, transparent 70%);
+
+>>>>>>> local
 }
 
-.p_rec {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: nowrap;
+.cta-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
 }
 
+.cta-content h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  background: var(--gradient-secondary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.cta-content p {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+}
+
+<<<<<<< refs/remotes/Saint-Analytics/main
 .group {
   background-color: #05caf2;
   border-radius: 40px;
@@ -338,6 +444,31 @@
   align-items: center;
   justify-content: center;
   line-height: 1;
+=======
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  background: var(--gradient-primary);
+  border: none;
+  border-radius: 12px;
+  color: var(--text-color);
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  color: var(--text-color);
+  box-shadow: 0 8px 16px rgba(5, 202, 242, 0.2);
+}
+
+.cta-button i {
+  transition: transform 0.3s ease;
+>>>>>>> local
 }
 
 .overlap-3 {
@@ -367,7 +498,35 @@
   min-width: 15px;
 }
 
+<<<<<<< refs/remotes/Saint-Analytics/main
 /* Responsive adjustments */
+=======
+.navbar .nav-link {
+  font-size: 1rem;
+}
+
+
+
+@media (max-width: 1200px) {
+
+  body {
+    font-size: 1.5rem;
+  }
+
+  .menu2 {
+    gap: 2rem;
+  }
+
+  .navbar .nav-link {
+    font-size: 1rem;
+  }
+
+  .text-wrapper-4, .text-wrapper-5 {
+    font-size: 2rem;
+  }
+}
+
+>>>>>>> local
 @media (max-width: 768px) {
   .zt-mail-icons {
     width: 8vw;

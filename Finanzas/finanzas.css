@@ -1,3 +1,16 @@
+:root {
+  --primary-color: #05caf2;
+  --secondary-color: #00e6c3;
+  --dark-blue: #16233f;
+  --light-blue: rgba(5, 202, 242, 0.1);
+  --text-color: #ffffff;
+  --text-muted: rgba(255, 255, 255, 0.8);
+  --gradient-primary: linear-gradient(135deg, #05caf2, #1093B1);
+  --gradient-secondary: linear-gradient(135deg, #00e6c3, #05caf2);
+  --card-bg: rgba(255, 255, 255, 0.05);
+  --card-border: rgba(255, 255, 255, 0.1);
+  --transition: all 0.3s ease;
+}
 /* Navbar */
 .navbar {
   display: flex;
@@ -48,17 +61,114 @@
   margin-right: 0;
 }
 
-/* Dropdown menu styles */
-.dropdown-submenu > .dropdown-menu {
-  top: 0;
-  left: 100%;
-  display: none;
+/* Hero Section */
+.hero-section {
+  padding-top: 6rem;
+  text-align: center;
 }
 
-.dropdown-submenu:hover > .dropdown-menu {
-  display: block;
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
 }
 
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  background: var(--gradient-secondary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fadeInUp 0.8s ease;
+}
+
+.hero-subtitle {
+  font-size: 1.4rem;
+  color: var(--text-muted);
+  margin-bottom: 2.5rem;
+  animation: fadeInUp 0.8s ease 0.2s backwards;
+}
+
+.hero-features {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 3rem;
+  animation: fadeInUp 0.8s ease 0.4s backwards;
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.feature i {
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+.feature span {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+}
+
+/* CTA Section */
+.cta-section {
+  padding-right: 2rem;
+  padding-left: 2rem;
+  padding-bottom: 6rem;
+  padding-top: 8rem;
+  background: radial-gradient(rgba(5, 202, 242, 0.15) 0%, transparent 70%);
+
+}
+
+.cta-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.cta-content h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  background: var(--gradient-secondary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.cta-content p {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  background: var(--gradient-primary);
+  border: none;
+  border-radius: 12px;
+  color: var(--text-color);
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  color: var(--text-color);
+  box-shadow: 0 8px 16px rgba(5, 202, 242, 0.2);
+}
+
+.cta-button i {
+  transition: transform 0.3s ease;
+}
 
 /* Ajustes responsive de la Navbar */
 
@@ -133,7 +243,7 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  margin-top: 5%;
+  margin-top: 2rem;
   height: 100%;
 }
 

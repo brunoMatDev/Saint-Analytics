@@ -25,7 +25,11 @@ document.addEventListener("DOMContentLoaded", () => {
     animateCountUp(clientsElement, 20); // Incrementa hasta 15
 });
 
+<<<<<<< refs/remotes/Saint-Analytics/main
 
+=======
+let logoNavBar = document.getElementById('logonav');
+>>>>>>> local
 let ultimaPosicionScroll = window.scrollY;
 let header = document.getElementById('header');
 let headerOculto = false; // Variable para controlar si el header está oculto
@@ -46,10 +50,10 @@ window.addEventListener('scroll', function () {
     ultimaPosicionScroll = posicionActual; // Actualizar la posición del scroll
 });
 
-
 let MenuCelu = document.getElementById('menuCELU');
 let button = document.getElementById('burguer');
 let body = document.getElementById('body');
+<<<<<<< refs/remotes/Saint-Analytics/main
 let logoNavBar = document.getElementById('logonav')
 
 button.addEventListener('click', function(){
@@ -67,4 +71,40 @@ button.addEventListener('click', function(){
 
 
 
+=======
+
+let icon = button.querySelector('i');
+
+// Función para cerrar el menú
+function cerrarMenu() {
+    body.style.overflow = 'auto';
+    MenuCelu.style.left = '-200%';
+    logoNavBar.style.visibility = 'visible';
+    icon.classList.remove('bi-x-lg');
+    icon.classList.add('bi-list');
+}
+
+// Toggle del menú con el botón
+button.addEventListener('click', function () {
+    if (MenuCelu.style.left == '0px') {
+        cerrarMenu();
+    } else {
+        body.style.overflow = 'hidden';
+        MenuCelu.style.left = '0px';
+        logoNavBar.style.visibility = 'hidden';
+        icon.classList.remove('bi-list');
+        icon.classList.add('bi-x-lg');
+    }
+});
+
+// Cerrar el menú al hacer clic en un enlace
+let enlacesMenu = document.querySelectorAll('.aCELU');
+enlacesMenu.forEach(enlace => {
+    enlace.addEventListener('click', function () {
+        cerrarMenu();
+    });
+});
+
+    
+>>>>>>> local
 
