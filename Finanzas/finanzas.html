@@ -6,15 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Finanzas</title>
     <link rel="shortcut icon" href="/images/azul.svg" />
-    <link rel="stylesheet" href="/assets/layout.css"/>
-    <link rel="stylesheet" href="/Finanzas/finanzas.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/Finanzas/finanzas.css" />
+    <link rel="stylesheet" href="/assets/layout.css" />
 </head>
 
-<body class="body2">
+<body class="body2" id="body">
   <header id="header">
     <nav class="navbar navbar-expand-lg fixed-top">
       <div class="container-fluid">
@@ -52,7 +52,7 @@
   </header>
 
   <div class="menuCELU" id="menuCELU">
-    <a class="brandCELU" href="#">
+    <a class="brandCELU" href="/index.html">
       <img src="/images/logo.png" alt="Saint Analytics Logo" />
     </a>
     <ul class="ulCELU">
@@ -217,49 +217,34 @@
         </div>
       </div>
     </section>
-    <footer class="footer-fixed-bottom">
-        <div class="footer-fixed-bottom" role="contentinfo">
-          <div class="overlap-3">
-            <div class="mail">
-              <img
-                class="zt-mail-icons"
-                src="/images/mail.png"
-                alt="Ícono de correo electrónico"
-              />
-              <div class="text-wrapper-18 ">info@saintanalytics.com</div>
-            </div>
-            <div>
-              <p class="text-wrapper-18 info">&copy; 2024 Saint Analytics</p>
-            </div>
-            <div class="redes" aria-label="Enlaces a redes sociales">
-              <a href="#" aria-label="Discord">
-                <img
-                  class="zt-mail-icons"
-                  src="/images/discord.png"
-                  alt="Ícono de Discord"
-                />
-              </a>
-              <a href="#" aria-label="LinkedIn">
-                <img
-                  class="zt-mail-icons"
-                  src="/images/linkedin.png"
-                  alt="Ícono de LinkedIn"
-                />
-              </a>
-              <a href="#" aria-label="Instagram">
-                <img
-                  class="zt-mail-icons"
-                  src="/images/instagram.png"
-                  alt="Ícono de Instagram"
-                />
-              </a>
-            </div>
+    <footer class="footer">
+      <div class="footer-fixed-bottom" role="contentinfo">
+        <div class="overlap-3">
+          <div class="mail">
+            <img class="zt-mail-icons" src="/images/mail.png" alt="Ícono de correo electrónico" />
+            <div class="text-wrapper-18">info@saintanalytics.com</div>
+          </div>
+          <div>
+            <p class="text-wrapper-18 info">&copy; 2024 Saint Analytics</p>
+          </div>
+          <div class="redes" aria-label="Enlaces a redes sociales">
+            <a href="https://discord.gg/pGdd5uZS" target="_blank" aria-label="Discord">
+              <img class="zt-mail-icons" src="/images/discord.png" alt="Ícono de Discord" />
+            </a>
+            <a href="" aria-label="LinkedIn">
+              <img class="zt-mail-icons" src="/images/linkedin.png" alt="Ícono de LinkedIn" />
+            </a>
+            <a href="https://www.instagram.com/saintanalytics/" target="_blank" aria-label="Instagram">
+              <img class="zt-mail-icons" src="/images/instagram.png" alt="Ícono de Instagram" />
+            </a>
           </div>
         </div>
-      </footer>
+      </div>
+    </footer>
 
     <!-- Scripts de Bootstrap y JS adicional para el submenú -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/animations.js"></script>
     <script>
         // JS para manejar el submenú de "Empresas"
         document.addEventListener("DOMContentLoaded", function () {

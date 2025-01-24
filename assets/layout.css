@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: .5rem .5rem;
+  padding: 1rem 2rem;
   background: linear-gradient(180deg, rgba(9, 14, 30, 0.89) 0%, rgba(9, 14, 30, 0.28) 100%);
   position: fixed;
   top: 0;
@@ -64,19 +64,20 @@
 }
 
 .menuCELU {
-	display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
-	align-content: center;
-	position: fixed;
-	z-index: 10;
-	background: linear-gradient(180deg, rgb(22, 35, 63) 0%, rgb(9, 14, 30) 100%);
-	width: 100vw;
-	height: 100%;
-	margin-top: 4rem;
-	left: -200%;
-	transition: 0.6s ease-in-out;
-  }
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  position: fixed;
+  z-index: 10;
+  background: linear-gradient(180deg, rgb(22, 35, 63) 0%, rgb(9, 14, 30) 100%);
+  width: 100%;
+  top: 0;
+  height: 100%;
+  padding-top: 4rem;
+  left: -200%;
+  transition: 0.6s ease-in-out;
+}
   
   .menuCELU.active {
 	left: 0; /* Muestra el menú cuando esté activo */
@@ -174,7 +175,7 @@
   }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 991px) {
   .navbar {
     padding-bottom: 2rem;
     padding-top: 2rem;
@@ -233,15 +234,21 @@
 }
 
 @media screen and (max-width: 480px) {
-  .liCELU {
-    font-size: 1.8rem; /* Ajuste del texto en pantallas pequeñas */
-  }
 
+  .redesCELU{
+    margin-top: 1rem;
+  }
+  .liCELU {
+    font-size: 1.8rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    /* Ajuste del texto en pantallas pequeñas */
+  }
   .redesCELU {
     flex-direction: row; /* Asegura que los íconos sigan en fila */
     justify-content: space-around; /* Distribuye los íconos de manera uniforme */
     padding-bottom: 1rem; /* Añade espacio inferior */
-    gap: 0.5;
+    gap: 0.5rem;
   }
 
   .iconsCELU {

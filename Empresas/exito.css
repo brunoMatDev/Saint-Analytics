@@ -299,132 +299,68 @@ span {
 	position: fixed;
 	z-index: 10;
 	background: linear-gradient(180deg, rgb(22, 35, 63) 0%, rgb(9, 14, 30) 100%);
-	width: 100vw;
-	height: 100%;
-	margin-top: 4rem;
-	left: -200%;
-	transition: 0.8s ease-in-out;
-}
-
-.menuCELU.active {
-	left: 0;
-	/* Muestra el menú cuando esté activo */
-}
-
-.liCELU {
-	justify-content: center;
-	font-size: 2.5rem;
-	/* Tamaño del texto */
-	padding: 1rem 0;
-	text-align: center;
-	color: #ffffff;
-	/* Texto blanco */
-	transition: all 0.3s ease-in-out;
-	box-shadow: 0 7px 16px rgba(0, 0, 0, 0.2);
-	/* Sombra ligera */
-}
-
-.aCELU {
-	text-decoration: none;
-	/* Elimina subrayado */
-	color: #ffffff;
-	/* Mantiene el texto blanco */
-	font-weight: 500;
-	/* Grosor del texto */
-}
-
-.aCELU:hover {
-	color: #50b7f5;
-	/* Color azul brillante al pasar el mouse */
-}
-
-.ulCELU {
-	margin-top: 3rem;
-	padding: 0;
-	list-style-type: none;
 	width: 100%;
-}
-
-.brandCELU {
-	display: flex;
-	justify-content: center;
-	height: auto;
-	padding-top: 1.6rem;
-}
-
-.redesCELU {
-	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
-	gap: 1rem;
-	/* Espaciado entre íconos */
-	margin-top: 2rem;
-}
-
-.redesCELU a {
-	padding: 0.5rem;
-}
-
-.iconsCELU {
-	width: 40px;
-	/* Ajuste para íconos más pequeños */
-	height: auto;
-}
-
-
-
-
-/* Media Queries */
-@media screen and (max-width: 768px) {
+	top: 0;
+	height: 100%;
+	padding-top: 4rem;
+	left: -200%;
+	transition: 0.6s ease-in-out;
+  }
+	
+	.menuCELU.active {
+	  left: 0; /* Muestra el menú cuando esté activo */
+	}
+	
 	.liCELU {
-		font-size: 2rem;
-		/* Texto más pequeño en pantallas medianas */
+	  justify-content: center;
+	  font-size: 2.5rem; /* Tamaño del texto */
+	  padding: 1rem 0;
+	  text-align: center;
+	  color: #ffffff; /* Texto blanco */
+	  transition: all 0.3s ease-in-out;
+	  box-shadow: 0 7px 16px rgba(0, 0, 0, 0.2); /* Sombra ligera */
 	}
-
-	.iconsCELU {
-		width: 6vw;
-		/* Ajusta el tamaño del icono */
+	
+	.aCELU {
+	  text-decoration: none; /* Elimina subrayado */
+	  color: #ffffff; /* Mantiene el texto blanco */
+	  font-weight: 500; /* Grosor del texto */
 	}
-}
-
-@media screen and (max-width: 480px) {
-	.liCELU {
-		font-size: 1.8rem;
-		/* Ajuste del texto en pantallas pequeñas */
+	
+	.aCELU:hover {
+	  color: #50b7f5; /* Color azul brillante al pasar el mouse */
 	}
-
+	
+	.ulCELU {
+	  margin-top: 3rem;
+	  padding: 0;
+	  list-style-type: none;
+	  width: 100%;
+	}
+	
+	.brandCELU {
+	  display: flex;
+	  justify-content: center;
+	  height: auto;
+	  padding-top: 1.6rem;
+	}
+	
 	.redesCELU {
-		flex-direction: row;
-		/* Asegura que los íconos sigan en fila */
-		justify-content: space-around;
-		/* Distribuye los íconos de manera uniforme */
-		padding-bottom: 1rem;
-		/* Añade espacio inferior */
-		gap: 0.5;
+	  display: flex;
+	  justify-content: center;
+	  flex-wrap: wrap;
+	  gap: 1rem; /* Espaciado entre íconos */
+	  margin-top: 2rem;
 	}
-
+	
+	.redesCELU a {
+	  padding: 0.5rem;
+	}
+	
 	.iconsCELU {
-		width: 8vw;
-		/* Tamaño adecuado para pantallas pequeñas */
+	  width: 40px; /* Ajuste para íconos más pequeños */
+	  height: auto;
 	}
-}
-
-@media screen and (min-width: 1024px) {
-	.postcard__text {
-		padding: 2rem 3.5rem;
-	}
-
-	.postcard__text:before {
-		content: "";
-		position: absolute;
-		display: block;
-
-		top: -0%;
-		height: 130%;
-		width: 38px;
-	}
-
-}
 
 /* COLORS */
 .postcard .postcard__tagbox .green.play:hover {
@@ -1505,3 +1441,139 @@ span {
 	height: 300px;
 	width: 400px;
 }
+
+/* Media Queries */
+@media (max-width: 1440px) {
+	.hero-title {
+		font-size: 3rem;
+	}
+
+	.hero-subtitle {
+		font-size: 1.2rem;
+	}
+
+	.stat-number {
+		font-size: 2rem;
+	}
+
+	.stat-label {
+		font-size: 1rem;
+	}
+}
+
+@media (max-width: 1366px) {
+	.hero-title {
+		font-size: 2.8rem;
+	}
+
+	.hero-subtitle {
+		font-size: 1.1rem;
+	}
+
+	.stat-number {
+		font-size: 1.8rem;
+	}
+
+	.stat-label {
+		font-size: 0.95rem;
+	}
+}
+
+@media (max-width: 1140px) {
+	.hero-title {
+		font-size: 2.5rem;
+	}
+
+	.hero-subtitle {
+		font-size: 1rem;
+	}
+
+	.stat-number {
+		font-size: 1.6rem;
+	}
+
+	.stat-label {
+		font-size: 0.9rem;
+	}
+}
+
+@media (max-width: 991px) {
+	.hero-title {
+		font-size: 2.2rem;
+	}
+
+	.hero-section {
+		padding-bottom: 0;
+	}
+
+	.hero-subtitle {
+		font-size: 0.9rem;
+	}
+	.hero-content{
+		
+	}
+
+	.hero-stats {
+		justify-content: center;
+		display: flex;
+	}
+
+	.stat-number {
+		font-size: 1.4rem;
+	}
+
+	.stat-label {
+		font-size: 0.85rem;
+	}
+
+	.stat-item {
+		padding-right: 0rem;
+		padding-left: 0rem;
+		width: 25%;
+	}
+}
+
+@media (max-width: 768px) {
+	.hero-title {
+		font-size: 2rem;
+	}
+
+	.hero-subtitle {
+		font-size: 0.85rem;
+	}
+	.hero-section{
+		padding-left: 0;
+		padding-right: 0;	
+	}
+
+	.stat-number {
+		font-size: 1.2rem;
+	}
+
+	.stat-label {
+		font-size: 0.8rem;
+	}
+
+	.hero-stats {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media (max-width: 660px) {
+	.hero-title {
+		font-size: 3rem;
+	}
+
+	.hero-subtitle {
+		font-size: 1rem;
+	}
+
+	.stat-number {
+		font-size: 2rem;
+	}
+
+	.stat-label {
+		font-size: 1.1rem;
+	}
+}
+

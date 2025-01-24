@@ -96,7 +96,7 @@
   font-family: 'Roboto Condensed', sans-serif;
 }
 
-.cert p{
+.cert p {
   margin-bottom: 0;
   font-weight: 500;
 }
@@ -160,7 +160,7 @@ span {
   width: 100%;
   top: 0;
   height: 100%;
-  margin-top: 4rem;
+  padding-top: 4rem;
   left: -200%;
   transition: 0.6s ease-in-out;
 }
@@ -270,6 +270,10 @@ span {
   min-width: 15px;
 }
 
+.img-section {
+  padding: 2rem 0;
+}
+
 .img-cont {
   display: flex;
   justify-content: center;
@@ -284,16 +288,22 @@ span {
 }
 
 .img {
-  height: 90%;
-  width: 90%;
+  max-width: 100%;
+  /* Ensure the image scales with the width of its container */
+  height: auto;
+  /* Maintain the aspect ratio */
+  border-radius: 8px;
+  /* Optional: Add rounded corners */
 }
 
 
 .img-header {
   padding-left: 4rem;
-  padding-top: 4rem;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
   color: white;
-  font-size: 0rem;
+  font-size: 0;
+  /* Hide font size, will be updated in media queries */
 }
 
 .img-header h2 {
@@ -309,13 +319,7 @@ span {
   margin-bottom: 7rem;
 }
 
-.section-header h2 {
-  font-size: 3rem;
-  font-weight: 700;
-  background: white;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+
 
 /*CARROUSEL*/
 
@@ -1345,9 +1349,31 @@ Center body {
   .card h4 {
     font-size: 1.2rem;
   }
+
+  .img-header {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .img-header h2 {
+    font-size: 2.2rem;
+    padding-left: 1rem;
+  }
+
+  .service-header,
+  .section-header {
+    padding-left: 1rem;
+  }
+
+  .img-cont {
+    margin: 2rem;
+  }
+
+
+
 }
 
-@media (max-width: 992px) {
+@media (max-width: 991px) {
   .navbar {
     padding-bottom: 2rem;
     padding-top: 2rem;
@@ -1417,6 +1443,96 @@ Center body {
   .info {
     padding-right: 0;
   }
+
+  .section-header {
+    padding-left: 1rem;
+  }
+
+  .service-header {
+    padding-left: 1rem;
+  }
+
+
+  .products-section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .product-card h3 {
+    font-size: 1.5rem;
+  }
+
+  .product-card p {
+    font-size: 1rem;
+  }
+
+  .feature-list li {
+    font-size: 0.9rem;
+  }
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+    padding: 2rem;
+  }
+
+  .contact-header h2 {
+    font-size: 2rem;
+    text-align: center;
+
+  }
+
+  .contact-header p {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .benefit-item {
+    padding: 1rem;
+  }
+
+  .benefit-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+
+  .benefit-text h4 {
+    font-size: 1rem;
+  }
+
+  .benefit-text p {
+    font-size: 0.9rem;
+  }
+
+  .contact-form-wrapper {
+    padding: 2rem;
+  }
+
+  .form-title {
+    font-size: 1.8rem;
+  }
+
+  .form-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .input-group input,
+  .input-group textarea {
+    padding: 0.8rem 0.8rem 0.8rem 2.5rem;
+  }
+
+  .submit-button {
+    padding: 0.8rem;
+    font-size: 1rem;
+  }
+  .bi-microsoft {
+    font-size: 1.5rem;
+    margin-right: 0rem;
+  }
 }
 
 @media (min-width: 1440px) {
@@ -1428,6 +1544,9 @@ Center body {
     font-size: 1rem;
   }
 
+  .grid {
+    gap: 1rem;
+  }
 }
 
 /* Media Queries */
@@ -1442,7 +1561,118 @@ Center body {
     /* Ajusta el tamaño del icono */
   }
 
+  .products-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+  }
 
+  .product-card {
+    padding: 1.5rem;
+  }
+
+  .card-icon {
+    font-size: 2.5rem;
+  }
+
+  .product-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .product-card p {
+    font-size: 0.9rem;
+  }
+
+  .feature-list {
+    text-align: center;
+  }
+
+  .feature-list li {
+    font-size: 0.8rem;
+  }
+
+  .card-cta {
+    padding: 0.6rem 1.5rem;
+  }
+
+  .img-header {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .img-header h2 {
+    font-size: 1.6rem;
+  }
+
+  .img-cont {
+    margin: 1.5rem;
+  }
+
+  .service-header,.section-header {
+    text-align: center;
+  }
+  
+
+  /*RESPONSIVE CONTACT*/
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+    padding: 2rem;
+  }
+
+  .contact-header h2 {
+    font-size: 2rem;
+    text-align: center;
+
+  }
+
+  .contact-header p {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .benefit-item {
+    padding: 1rem;
+  }
+
+  .benefit-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+
+  .benefit-text h4 {
+    font-size: 1rem;
+  }
+
+  .benefit-text p {
+    font-size: 0.9rem;
+  }
+
+  .contact-form-wrapper {
+    padding: 2rem;
+  }
+
+  .form-title {
+    font-size: 1.8rem;
+  }
+
+  .form-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .input-group input,
+  .input-group textarea {
+    padding: 0.8rem 0.8rem 0.8rem 2.5rem;
+  }
+
+  .submit-button {
+    padding: 0.8rem;
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 660px) {
@@ -1470,9 +1700,13 @@ Center body {
   .Servicios {
     padding: 1rem;
   }
-
+  .redesCELU{
+    margin-top: 1rem;
+  }
   .liCELU {
     font-size: 1.8rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
     /* Ajuste del texto en pantallas pequeñas */
   }
 
@@ -1483,9 +1717,8 @@ Center body {
     /* Distribuye los íconos de manera uniforme */
     padding-bottom: 1rem;
     /* Añade espacio inferior */
-    gap: 0.5;
+    gap: 0.5rem;
   }
-
   .iconsCELU {
     width: 8vw;
     /* Tamaño adecuado para pantallas pequeñas */
@@ -1504,8 +1737,33 @@ Center body {
     font-size: 1.5rem;
   }
 
+  .service-header {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .section-header {
+    padding-left: 0;
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+
   .cert img {
     height: 2em;
+  }
+
+  .img-header {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  .img-header h2 {
+    font-size: 1.2rem;
+  }
+
+  .img-cont {
+    margin: 1rem;
   }
 
   .grid {
@@ -1526,6 +1784,45 @@ Center body {
   .container2 {
     margin-top: 10rem;
     margin-bottom: 8rem;
+  }
+
+  .products-section {
+    padding: 1rem;
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-card {
+    padding: 1rem;
+  }
+
+  .card-icon {
+    font-size: 2rem;
+    margin-bottom: 0;
+  }
+
+  .product-card h3 {
+    font-size: 1.1rem;
+    padding-bottom: 1rem;
+
+  }
+
+  .product-card p {
+    font-size: 0.8rem;
+  }
+
+  .feature-list {
+    text-align: center;
+  }
+
+  .feature-list li {
+    font-size: 0.7rem;
+  }
+
+  .card-cta {
+    padding: 0.5rem 1rem;
   }
 
 }

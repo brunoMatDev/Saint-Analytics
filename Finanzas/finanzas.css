@@ -11,12 +11,20 @@
   --card-border: rgba(255, 255, 255, 0.1);
   --transition: all 0.3s ease;
 }
+
 /* Navbar */
+.cont {
+  padding-bottom: 3rem;
+  padding-top: 0rem;
+  margin-left: 10rem;
+  margin-right: 10rem;
+}
+
 .navbar {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: .5rem .5rem;
   background: linear-gradient(180deg, rgba(9, 14, 30, 0.89) 0%, rgba(9, 14, 30, 0.28) 100%);
   position: fixed;
   top: 0;
@@ -25,8 +33,12 @@
 }
 
 .navbar-brand {
-  position: absolute;
-  left: 1rem;
+  padding-top: .3125rem;
+  padding-bottom: .3125rem;
+  margin-right: 1rem;
+  font-size: 1.25rem;
+  text-decoration: none;
+  white-space: nowrap;
 }
 
 .menu2 {
@@ -41,11 +53,7 @@
   flex-grow: 1;
 }
 
-.container{
-  padding-bottom: 3rem;
-  padding-top: 0rem;
-  width: 100%;
-}
+
 .navbar .nav-link {
   color: #ffffff;
   font-size: 1rem;
@@ -65,6 +73,8 @@
 .hero-section {
   padding-top: 6rem;
   text-align: center;
+  padding-right: 2rem;
+  padding-left: 2rem;
 }
 
 .hero-content {
@@ -145,6 +155,7 @@
   margin-bottom: 2rem;
 }
 
+
 .cta-button {
   display: inline-flex;
   align-items: center;
@@ -170,63 +181,7 @@
   transition: transform 0.3s ease;
 }
 
-/* Ajustes responsive de la Navbar */
 
-/* Dispositivos pequeños: Móvil (hasta 720px) */
-@media (max-width: 720px) {
-  .navbar-collapse {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    background-color: rgba(9, 14, 30, 0.9);
-    padding: 1rem;
-  }
-
-  .menu {
-    display: none; /* Oculta el menú horizontal en dispositivos pequeños */
-  }
-
-  .menu2 {
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
-
-  .navbar-toggler {
-    display: flex; /* Muestra el botón hamburguesa en pantallas pequeñas */
-    align-items: center;
-    border: none;
-    background: none;
-  }
-
-  .nav-link {
-    text-align: center;
-    width: 100%;
-    padding: 0.5rem 0;
-  }
-}
-
-/* Tablets y Ordenadores Portátiles Medianos (hasta 1366px) */
-@media (max-width: 1366px) {
-  .menu2 {
-    gap: 2rem;
-  }
-
-  .navbar .nav-link {
-    font-size: 1rem;
-  }
-}
-
-/* Ordenadores de Escritorio Grandes (1440px en adelante) */
-@media (min-width: 1440px) {
-  .menu2 {
-    gap: 2.5rem;
-  }
-
-  .navbar .nav-link {
-    font-size: 1rem;
-  }
-}
 
 /* Main Content Styling */
 .body2 {
@@ -257,12 +212,12 @@
 
 .text-wrapper-f {
   font-size: 3rem;
-    font-weight: 700;
-    color: #ffffff;
-    text-align: center;
-    margin-bottom: 1.5rem;
-    letter-spacing: 0.1rem;
-    font-family: 'Roboto', sans-serif !important;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.1rem;
+  font-family: 'Roboto', sans-serif !important;
 }
 
 .text-wrapper-f2 {
@@ -290,131 +245,90 @@
   clip-path: inset(37px 0px 100px 0px);
 }
 
-/* Responsive Design for Power BI */
-@media (min-width: 1920px) {
-  .pbi {
-      max-width: 1400px;
-      height: 900px;
-      clip-path: inset(37px 0px 100px 0px);
-  }
-}
 
-@media (min-width: 1440px) and (max-width: 1919px) {
-  .pbi {
-      max-width: 1400px;
-      height: 900px;
-      clip-path: inset(37px 0px 100px 0px);
-  }
-}
-
-@media (min-width: 1366px) and (max-width: 1439px) {
-  .pbi {
-      max-width: 1300px;
-      height: 750px;
-      clip-path: inset(35px 0px 90px 0px);
-  }
-}
-
-@media (max-width: 1280px) {
-  .pbi {
-      max-width: 1000px;
-      height: 650px;
-      clip-path: inset(25px 0px 80px 0px);
-  }
-}
-
-@media (max-width: 720px) {
-  .pbi {
-      max-width: 900px;
-      height: 500px;
-      clip-path: inset(25px 0px 80px 0px);
-  }
-}
-
-@media (max-width: 640px) {
-  .pbi {
-      max-width: 800px;
-      height: 450px;
-      clip-path: inset(25px 0px 66px 0px);
-  }
-}
-
-@media (max-width: 480px) {
-  .pbi {
-      max-width: 700px;
-      height: 300px;
-      clip-path: inset(20px 0px 80px 0px);
-  }
-}
 
 /* Accordion Styling */
 #accordion {
-  background: none; /* Sin fondo para el contenedor del acordeón */
-  
+  background: none;
+  /* Sin fondo para el contenedor del acordeón */
+
   .card {
-      background: none; /* Sin fondo en cada tarjeta del acordeón */
-      border: none; /* Sin borde en cada tarjeta */
+    background: none;
+    /* Sin fondo en cada tarjeta del acordeón */
+    border: none;
+    /* Sin borde en cada tarjeta */
   }
 
   .card-header {
-      margin-top: 8px;
-      background: none; /* Sin fondo en el encabezado de la tarjeta */
+    margin-top: 8px;
+    background: none;
+    /* Sin fondo en el encabezado de la tarjeta */
   }
 
   .accordion-title {
-      position: relative;
-      display: block;
-      padding: 8px 0 8px 50px;
-      background: rgba(9, 14, 30, 0.85); /* Fondo oscuro semitransparente */
-      border-radius: 8px;
-      text-decoration: none;
-      color: #ffffff; /* Color del texto e icono cuando está cerrado */
-      font-size: 16px;
-      font-weight: 700;
-      width: 100%;
-      text-align: left;
-      transition: all 0.4s ease-in-out;
-      border: none;
-      box-shadow: inset 2px 0px 0px #05caf2;
+    position: relative;
+    display: block;
+    padding: 8px 0 8px 50px;
+    background: rgba(9, 14, 30, 0.85);
+    /* Fondo oscuro semitransparente */
+    border-radius: 8px;
+    text-decoration: none;
+    color: #ffffff;
+    /* Color del texto e icono cuando está cerrado */
+    font-size: 16px;
+    font-weight: 700;
+    width: 100%;
+    text-align: left;
+    transition: all 0.4s ease-in-out;
+    border: none;
+    box-shadow: inset 2px 0px 0px #05caf2;
 
-      i {
-          position: absolute;
-          width: 40px;
-          height: 100%;
-          left: 0;
-          top: 0;
-          color: inherit; /* Usa el mismo color que el texto */
-          background: rgba(22, 35, 63, 0.6);
-          text-align: center;
-          border-right: 1px solid transparent;
-      }
+    i {
+      position: absolute;
+      width: 40px;
+      height: 100%;
+      left: 0;
+      top: 0;
+      color: inherit;
+      /* Usa el mismo color que el texto */
+      background: rgba(22, 35, 63, 0.6);
+      text-align: center;
+      border-right: 1px solid transparent;
+    }
 
-      &:hover {
-          padding-left: 60px;
-          color: #05caf2; /* Color al pasar el mouse */
-      }
+    &:hover {
+      padding-left: 60px;
+      color: #05caf2;
+      /* Color al pasar el mouse */
+    }
   }
 
   /* Estilo cuando el acordeón está expandido */
   [aria-expanded="true"] {
-      background: rgba(5, 202, 242, 0.2); /* Fondo ligeramente azul y transparente */
-      color: #ffffff; /* Cambia el color a blanco cuando está expandido */
+    background: rgba(5, 202, 242, 0.2);
+    /* Fondo ligeramente azul y transparente */
+    color: #ffffff;
+    /* Cambia el color a blanco cuando está expandido */
 
-      i {
-          color: inherit; /* Mantiene el color del texto al expandir */
-          background: #05caf2;
+    i {
+      color: inherit;
+      /* Mantiene el color del texto al expandir */
+      background: #05caf2;
 
-          &:before {
-              content: "\f068"; /* Cambia el ícono a "-" */
-          }
+      &:before {
+        content: "\f068";
+        /* Cambia el ícono a "-" */
       }
+    }
   }
 
   .accordion-body {
-      padding: 40px 55px;
-      background: rgba(22, 35, 63, 0.8); /* Fondo oscuro semitransparente para el contenido */
-      color: #ffffff; /* Texto blanco */
-      border-radius: 8px;
+    padding: 40px 55px;
+    background: rgba(22, 35, 63, 0.8);
+    /* Fondo oscuro semitransparente para el contenido */
+    color: #ffffff;
+    /* Texto blanco */
+    border-radius: 8px;
   }
 }
 
@@ -426,6 +340,7 @@
   width: 100%;
   padding: 2rem;
 }
+
 .overlap-3 {
   display: flex;
   justify-content: space-between;
@@ -433,7 +348,8 @@
   background-color: #19294E;
   padding: 0 1rem;
 }
-.info{
+
+.info {
   padding-top: 1rem;
   padding-right: 3rem;
 }
@@ -459,4 +375,148 @@
 
 .text-wrapper-18 {
   color: #ffffff;
+}
+
+/* Ajustes responsive de la Navbar */
+
+
+/* Responsive Design for Power BI */
+@media (min-width: 1920px) {
+  .pbi {
+    max-width: 1400px;
+    height: 900px;
+    clip-path: inset(37px 0px 100px 0px);
+  }
+}
+
+@media (min-width: 1440px) and (max-width: 1919px) {
+  .pbi {
+    max-width: 1400px;
+    height: 900px;
+    clip-path: inset(37px 0px 100px 0px);
+  }
+
+  .menu2 {
+    gap: 2.5rem;
+  }
+
+  .navbar .nav-link {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1366px) and (max-width: 1439px) {
+  .pbi {
+    max-width: 1300px;
+    height: 750px;
+    clip-path: inset(35px 0px 90px 0px);
+  }
+
+  .menu2 {
+    gap: 2rem;
+  }
+
+  .navbar .nav-link {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 1280px) {
+  .pbi {
+    max-width: 1000px;
+    height: 650px;
+    clip-path: inset(25px 0px 80px 0px);
+  }
+
+  .cont {
+    margin-left: 4rem;
+    margin-right: 4rem;
+  }
+}
+
+@media (max-width: 991) {
+  .redes {
+    display: none;
+  }
+
+  .info {
+    padding-right: 0;
+  }
+
+  .navbar {
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+  }
+
+  .navbar-toggler {
+    background: none;
+    font-size: 2.5rem;
+    color: #ffffff;
+    position: absolute;
+    right: 1rem;
+    display: flex;
+  }
+
+  .nav-link {
+    text-align: center;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+}
+
+@media (max-width: 720px) {
+  .pbi {
+    max-width: 900px;
+    height: 500px;
+    clip-path: inset(25px 0px 80px 0px);
+  }
+
+  .navbar-collapse {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: rgba(9, 14, 30, 0.9);
+    padding: 1rem;
+  }
+
+  .menu {
+    display: none;
+    /* Oculta el menú horizontal en dispositivos pequeños */
+  }
+
+  .menu2 {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .navbar-toggler {
+    display: flex;
+    /* Muestra el botón hamburguesa en pantallas pequeñas */
+    align-items: center;
+    border: none;
+    background: none;
+  }
+
+  .nav-link {
+    text-align: center;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .pbi {
+    max-width: 800px;
+    height: 450px;
+    clip-path: inset(25px 0px 66px 0px);
+  }
+}
+
+@media (max-width: 480px) {
+  .pbi {
+    max-width: 700px;
+    height: 300px;
+    clip-path: inset(20px 0px 80px 0px);
+  }
 }
