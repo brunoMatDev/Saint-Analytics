@@ -500,12 +500,6 @@ h2 {
   .text-wrapper-15 {
     font-size: 1rem;
   }
-
-  .grid {
-    gap: 1rem;
-  }
-}
-@media(max-width:500px){
   .title_div{
     font-size: 2.2rem;
     margin-left: 0;
@@ -514,6 +508,7 @@ h2 {
   .grid{
     grid-template-columns: 1fr;
   }
-  
-
+  .grid {
+    gap: 1rem;
+  }
 }
