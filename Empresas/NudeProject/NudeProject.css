@@ -117,13 +117,13 @@
 }
 
 .hero-title {
-  font-size: 3.5rem;
+  font-size: 5rem;
   font-weight: 700;
   margin-bottom: 1rem;
-  background: var(--gradient-primary);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: fadeInUp 0.8s ease-out;
+  background: white;
 }
 
 .hero-subtitle {
